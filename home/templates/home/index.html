@@ -2,21 +2,29 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
+<section class="hero-container">
+<div class="container-fluid h-100">
     <div class="row h-100">
-        <div class="col-6 offset-7 my-auto">
-            <h2 class="display-4 slogan-font text-grey ">
+        <div class="col-5 offset-7 my-auto">
+            <h1 class=" hero-text text-grey">
                 Catch phrase / Slogan
-            </h2>
+            </h1>
         </div>
     </div>
 </div>
+</section>
+
+<section>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 favourites">
+            <h2>Favourites of the month</h2>
+
+        </div>
+    </div>
+</div>
+</section>
 {% endblock %}}

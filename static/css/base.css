@@ -1,13 +1,29 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+
+html,
+body {
     height: 100%;
 }
 
-body {
+header{
+    font-family: 'Lora', sans-serif;
+}
+
+.hero-container {
     background: url('/media/homepage.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: 100%;
     color : #CAC8CF;
-    font-family: 'Lato';
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.hero-text{
+    font-family: 'Lora', sans-serif;
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 65%;
 }
 
 /* from Bulma */
