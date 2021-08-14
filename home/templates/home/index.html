@@ -6,25 +6,50 @@
 
 {% block content %}
 <section class="hero-container">
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="col-5 offset-7 my-auto">
-            <h1 class=" hero-text text-grey">
-                Catch phrase / Slogan
-            </h1>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-5 offset-7 my-auto">
+                <h1 class=" section-text hero-text text-grey">
+                    Catch phrase / Slogan
+                </h1>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
-<section>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 favourites">
-            <h2>Favourites of the month</h2>
+<section class="section-two">
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="col-12 section-text text-center my-5">
+                <h2 class="text-green">Favourites of the month</h2>
 
+                <div class="row my-5 text-center text-green">
+                    <div class="col-2 offset-3">
+                      <div class="card h-100">
+                        <img src="/media/aloe.jpg" class="card-img-top" alt="Aloe">
+                        <div class="card-body">
+                          <h5 class="card-title">Aloe vera</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="card h-100">
+                        <img src="/media/ficus-lyrata.jpg" class="card-img-top" alt="Ficus lyrata">
+                        <div class="card-body">
+                          <h5 class="card-title">Ficus Lyrata</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="card h-100">
+                        <img src="/media/fittonia.jpg" class="card-img-top" alt="Fittonia">
+                        <div class="card-body">
+                          <h5 class="card-title">Fittonia</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </section>
 {% endblock %}}

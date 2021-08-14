@@ -18,12 +18,22 @@ header{
     min-height: 100vh;
 }
 
-.hero-text{
+.section-text{
     font-family: 'Lora', sans-serif;
     font-style: italic;
     position: absolute;
+}
+
+.hero-text{
     top: 50%;
     left: 65%;
+}
+
+.card-img-top{
+    float: none;
+    width:  auto;
+    height: 200px;
+    object-fit: cover;
 }
 
 /* from Bulma */
@@ -53,7 +63,7 @@ header{
 .border-grey {
     border: 1px solid #CAC8CF !important;
 }
-.text-green
+.text-green,
 .btn-green{
     color: #5B9A3F;
 }
