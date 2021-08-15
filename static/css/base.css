@@ -5,8 +5,17 @@ body {
     height: 100%;
 }
 
-header{
+header {
     font-family: 'Lora', sans-serif;
+}
+
+.carousel {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.carousel-inner{
+    height: 150px;
 }
 
 .hero-container {
@@ -18,22 +27,26 @@ header{
     min-height: 100vh;
 }
 
-.section-text{
+.section-text {
     font-family: 'Lora', sans-serif;
     font-style: italic;
     position: absolute;
 }
 
-.hero-text{
+.hero-text {
     top: 50%;
     left: 65%;
 }
 
-.card-img-top{
+.card-img-top {
     float: none;
     width:  auto;
     height: 200px;
     object-fit: cover;
+}
+
+.section-two {
+    background-color: #5B9A3F !important; ;
 }
 
 /* from Bulma */
@@ -74,6 +87,10 @@ header{
 
 .dropdown-item{
     color: #5B9A3F;
+}
+
+.text-white{
+    color: #ffffff;
 }
 
 /* -------------------------------- Media Queries */
