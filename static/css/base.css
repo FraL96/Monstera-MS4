@@ -11,6 +11,10 @@ header {
     font-family: 'Lora', sans-serif;
 }
 
+#delivery-banner{
+    background-color: #5B9A3F;
+}
+
 .carousel {
     margin-top: 30px;
     margin-bottom: 50px;
