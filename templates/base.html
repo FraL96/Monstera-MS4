@@ -94,8 +94,8 @@
                                     <a href="" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register/Login</a>
+
                                 {% endif %}
                             </div>
                         </li>
@@ -128,7 +128,101 @@
         {% endblock %}
 
         {% block footer %}
-        
+        <footer class="container-fluid page-footer">
+            <div class="row">
+                <div class="col-12 text-center m-5">
+                    <img class="minilogo" src="/media/mini-logo.png" alt="Monstera">
+                </div>
+            </div>
+
+            <div class="row footer-arrange">
+                <div class="col-2 text-grey text-uppercase">
+                    <a href="" class="text-grey"><h5>Shop</h5></a>
+                    <hr>
+                    <ul>
+                        <li><a href="">Shop all</a></li>
+                        <li><a href="">Big leaves</a></li>
+                        <li><a href="">To hang</a></li>
+                        <li><a href="">Cacti</a></li>
+                        <li><a href="">Succulents</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2 text-uppercase">
+                    <a href=""><h5>Tips</h5></a>
+                    <hr>
+                </div>
+
+                <div class="col-2 text-uppercase">
+                    <a href=""><h5>Account</h5></a>
+                    <hr>
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <ul>
+                            <li><a href="">Management</a></li>
+                        {% endif %}
+                        <li><a href="">My Profile</a></li>
+                        <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+                        <li><a href="{% url 'account_signup' %}">Register/Login</a></li>
+                    {% endif %}
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <a href="" class="text-uppercase"><h5>Contacts</h5></a>
+                    <hr>
+                    <p><strong>Address:</strong><br> Via della Lapide, 23, Roma (IT) <br>
+                        <strong>Phone:</strong><br> 0012345678 <br>
+                        <strong>E-mail:</strong> francescalupu1996@gmail.com
+                    </p>
+
+                </div>
+
+                <div class="col-2 text-uppercase">
+                    <a href=""><h5>Payments</h5></a>
+                    <hr>
+                    <i class="fab fa-cc-visa fa-2x"></i>
+                    <i class="fab fa-cc-mastercard fa-2x"></i>
+                    <i class="fab fa-cc-stripe fa-2x"></i>
+                    <i class="fab fa-cc-paypal fa-2x"></i>
+                    <i class="fab fa-cc-amex fa-2x"></i>
+
+                </div>
+
+                <div class="col-2">
+                    <a href="" class="text-uppercase"><h5>Newsletter</h5></a>
+                    <hr>
+                    <div class="text-center">
+                        <input type="text" placeholder="Email">
+                        <button type="button" class="btn btn-sm rounded-pill border-grey text-grey subscribe">Subscribe</button>
+
+                        <p class="mt-4"><strong>And follow us on</strong></p>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <a class="m-3 hvr-pop" target="_blank" href="https://www.facebook.com/">
+                                    <i class="fab fa-facebook-f fa-2x"></i>
+                                    </a>
+                                <a class="m-3" target="_blank" href="https://www.instagram.com/">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>    
+                                <a class="m-3" target="_blank" href="https://youtube.com/">
+                                    <i class="fab fa-youtube fa-2x"></i>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--social links-->
+        <hr>
+        <div class="footer-copyright container-fluid">
+            <div class="row">
+                <div class=" col-12 text-center">
+                    Monstera © 2021 Francesca Lupu
+                </div>
+            </div>
+        </footer>
         {% endblock%}
 
         {% block postloadjs %}

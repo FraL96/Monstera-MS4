@@ -3,6 +3,8 @@
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
+
 }
 
 header {
@@ -27,10 +29,19 @@ header {
     min-height: 100vh;
 }
 
-.section-text {
+.minilogo{
+    max-width: 20%;
+    height: auto;
+}
+
+.section-text-title {
     font-family: 'Lora', sans-serif;
     font-style: italic;
-    position: absolute;
+}
+
+.section-text {
+    font-family: 'Lora', sans-serif;
+    font-style: normal;
 }
 
 .hero-text {
@@ -48,6 +59,37 @@ header {
 .section-two {
     background-color: #5B9A3F !important; ;
 }
+
+footer {
+    background-color: #5B9A3F !important;
+    color: #CAC8CF;
+    font-family: 'Lora', sans-serif;
+    font-style: normal;
+}
+
+.footer-arrange{
+    margin-left: 15px;
+}
+
+.page-footer a {
+    text-decoration: none;
+    color: #CAC8CF;
+}
+
+.page-footer li {
+    list-style-type: none;
+}
+
+.page-footer ul {
+    padding: 0px;
+}
+
+
+
+
+
+
+
 
 /* from Bulma */
 
@@ -95,24 +137,4 @@ header {
 
 /* -------------------------------- Media Queries */
 
-/*XL screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
 
-/* Medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
