@@ -11,10 +11,32 @@
 
 {% block content %}
 <div class="container-fluid">
+
     <div class="row">
-        <div class="col">
-            {{ products }}
+        <div class="col text-center my-5">
+            <h1 class="section-text-title text-green">All Plants</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for product in products %}
+        <div class="row w-100">
+            <div class="col-3 offset-3">
+                <div class="card mb-3">
+                    {% if product.image %}
+                        <img class="card-img-top prod-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    {% else %}
+                        <img class="card-img-top prod-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-3 text-center mt-5 section-text-title text-green">
+                <h4><strong>{{ product.name }}</strong></h4>
+                <h5>{{ product.species }}</h5>
+                <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+            </div>
         </div>
     </div>
 </div>
+{% endfor %}
 {% endblock %}}
