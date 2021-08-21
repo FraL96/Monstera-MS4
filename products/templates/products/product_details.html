@@ -27,7 +27,14 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center section-text-title text-green my-5">
-                <h1 class="my-5">{{ product.name }}</h1>
+                <h1 class="mt-5">{{ product.name }}</h1>
+                <h4 class="">{{ product.species }}</h4>
+                {% if product.category %}
+                        <p class="small">
+                            <a class="text-green section-text" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
+                            </a>
+                        </p>
+                        {% endif %}
                 <h4 class="my-5">€{{ product.price }}</h4>
 
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
