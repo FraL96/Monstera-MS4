@@ -15,8 +15,32 @@
     <div class="row">
         <div class="col text-center my-5">
             <h1 class="section-text-title text-green">All Plants</h1>
+
+            <hr class="col-6 offset-3 text-grey">
+            
+        <div class="row w-100">
+            <div class="col-5 offset-1 my-2">
+                <p class="text-grey">
+                    {% if search_term %}
+                        <span class="small"><a class="no-deco text-green grey-hover" href="{% url 'products' %}">Go back to all products</a> | </span>
+                    {% endif %}
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+            <div class="col-5 my-2">
+                <div class="sort-select-wrapper">
+                    <select id="sort-selector" class="custom-select custom-select-sm rounded-pill border-green text-green border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        <option value="species_asc" {% if current_sorting == 'species_asc' %}selected{% endif %}>Species (A-Z)</option>
+                        <option value="species_desc" {% if current_sorting == 'species_desc' %}selected{% endif %}>Species (Z-A)</option>
+                    </select>
+                </div>
+            </div>
         </div>
-    </div>
 
     <div class="row">
         {% for product in products %}

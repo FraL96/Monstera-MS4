@@ -5,7 +5,6 @@ body {
     height: 100%;
     overflow-x: hidden;
     padding-top: 60px;
-
 }
 
 header {
@@ -42,16 +41,22 @@ header {
 .section-text-title {
     font-family: 'Lora', sans-serif;
     font-style: italic;
-    text-decoration: none;
 }
 
 .section-text {
     font-family: 'Lora', sans-serif;
     font-style: normal;
-    text-decoration: none;
 }
 
 .section-text:hover{
+    color: #CAC8CF;
+}
+
+.no-deco{
+    text-decoration: none;
+}
+
+.no-deco:hover{
     color: #CAC8CF;
 }
 
