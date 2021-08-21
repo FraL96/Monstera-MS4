@@ -73,7 +73,7 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                <a href="" class="dropdown-item">Shop all</a>
+                                <a href="{% url 'products' %}" class="dropdown-item">Shop all</a>
                                 <a href="" class="dropdown-item">Big leaves</a>
                                 <a href="" class="dropdown-item">To hang</a>
                                 <a href="" class="dropdown-item">Cacti</a>
@@ -135,7 +135,9 @@
         <footer class="container-fluid page-footer">
             <div class="row">
                 <div class="col-12 text-center m-5">
+                    <a href="{% url 'home' %}">
                     <img class="minilogo" src="/media/mini-logo.png" alt="Monstera">
+                    </a>
                 </div>
             </div>
 
@@ -144,7 +146,7 @@
                     <a href="" class="text-grey"><h5>Shop</h5></a>
                     <hr>
                     <ul>
-                        <li><a href="">Shop all</a></li>
+                        <li><a href="{% url 'products' %}">Shop all</a></li>
                         <li><a href="">Big leaves</a></li>
                         <li><a href="">To hang</a></li>
                         <li><a href="">Cacti</a></li>

@@ -22,13 +22,14 @@
         {% for product in products %}
         <div class="row w-100">
             <div class="col-3 offset-3">
+                <a href="{% url 'product_detail' product.id %}">
                 <div class="card mb-3">
                     {% if product.image %}
                         <img class="card-img-top prod-img" src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}
                         <img class="card-img-top prod-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     {% endif %}
-                </div>
+                </div></a>
             </div>
             <div class="col-3 text-center mt-5 section-text-title text-green">
                 <h4><strong>{{ product.name }}</strong></h4>
