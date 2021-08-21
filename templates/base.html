@@ -29,10 +29,11 @@
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+        <script src="/static/js/script.js"></script>
         {% endblock %}
 
         {% block extra_js %}
-        <script src="/static/js/script.js"></script>
+    
         {% endblock %}
 
         <title>Monstera {% block extra_title %}{% endblock %}</title>
@@ -73,11 +74,11 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                <a href="{% url 'products' %}" class="dropdown-item">Shop all</a>
-                                <a href="" class="dropdown-item">Big leaves</a>
-                                <a href="" class="dropdown-item">To hang</a>
-                                <a href="" class="dropdown-item">Cacti</a>
-                                <a href="" class="dropdown-item">Succulents</a>
+                                <a href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents" class="dropdown-item">Shop all</a>
+                                <a href="{% url 'products' %}?category=big_leaves" class="dropdown-item">Big leaves</a>
+                                <a href="{% url 'products' %}?category=to_hang" class="dropdown-item">To hang</a>
+                                <a href="{% url 'products' %}?category=cacti" class="dropdown-item">Cacti</a>
+                                <a href="{% url 'products' %}?category=succulents" class="dropdown-item">Succulents</a>
                             </div>
                         </li>
                         <li class="list-inline-item dropdown">
@@ -146,11 +147,11 @@
                     <a href="" class="text-grey"><h5>Shop</h5></a>
                     <hr>
                     <ul>
-                        <li><a href="{% url 'products' %}">Shop all</a></li>
-                        <li><a href="">Big leaves</a></li>
-                        <li><a href="">To hang</a></li>
-                        <li><a href="">Cacti</a></li>
-                        <li><a href="">Succulents</a></li>
+                        <li><a href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents">Shop all</a></li>
+                        <li><a href="{% url 'products' %}?category=big_leaves" class="dropdown-item">Big leaves</a></li>
+                        <li><a href="{% url 'products' %}?category=to_hang" class="dropdown-item">To hang</a></li>
+                        <li><a href="{% url 'products' %}?category=cacti" class="dropdown-item">Cacti</a></li>
+                        <li><a href="{% url 'products' %}?category=succulents" class="dropdown-item">Succulents</a></li>
                     </ul>
                 </div>
 
