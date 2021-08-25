@@ -103,6 +103,13 @@ header {
     background-color: #CAC8CF;
 }
 
+.btn-hover:hover{
+    color: #5B9A3F !important;
+    border-color: #5B9A3F;
+    background-color: #ffffff;
+    
+}
+
 .section-two {
     background-color: #5B9A3F !important; ;
 }
