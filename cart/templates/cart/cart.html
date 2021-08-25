@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="hero-container">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-5 offset-7 my-auto">
+                <h1 class=" section-text hero-text text-grey">
+                    Catch phrase / Slogan
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-two container-fluid h-75">
+    <div class="row">
+        <div class="col-12  text-center my-5">
+            <h2 class="text-white section-text-title">Favourites of the month</h2>
+
+            <div class="row my-5 text-green section-text">
+                <div class="col-2 offset-3">
+                    <div class="card">
+                    <img src="/media/aloe.jpg" class="card-img-top img-fav" alt="Aloe">
+                    <div class="card-body">
+                        <h5 class="card-title">Aloe vera</h5>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card h-100">
+                    <img src="/media/ficus-lyrata.jpg" class="card-img-top img-fav" alt="Ficus lyrata">
+                    <div class="card-body">
+                        <h5 class="card-title">Ficus Lyrata</h5>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card h-100">
+                    <img src="/media/fittonia.jpg" class="card-img-top img-fav" alt="Fittonia">
+                    <div class="card-body">
+                        <h5 class="card-title">Fittonia</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid h-50">
+    <div class="row">
+        <div class="col-12 text-center my-5">
+            <h2 class="text-green section-text-title"><strong>Did you know that ... </strong></h2>
+
+            <div class="row">
+                <div class="col">
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide text-green section-text" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h4 class="my-3"><strong>Plants purify the air!</strong></h4>
+                                <h5 class="my-3">They take care of you too! <br> Your watering and cleaning pay off because your house plants are removing toxins all around you making the air more purified.</h5>
+                              </div>
+
+                              <div class="carousel-item">
+                                <h4 class="my-3"><strong>Plants decrease your stress levels</strong></h4>
+                                <h5 class="m-3">A new plant addition in your at-home office can make telecommuting less stressful. <br> House plants are proven to relieve stress and improve mental wellbeing and as a result, increasing productivity.</h5>
+                              </div>
+
+                              <div class="carousel-item">
+                                <h4 class="my-3"><strong>Plants love music</strong></h4>
+                                <h5 class="m-3">Growing your plants can be a quiet and peaceful experience but they also want to listen to your playlists. <br> House plants love music and it encourages growth, so turn up your playlist!</h5>
+                              </div>
+
+                              <div class="carousel-item">
+                                <h4 class="my-3"><strong>Plants reduce noise pollution</strong></h4>
+                                <h5 class="m-3">Houseplants, such as peace lilies, have been found to absorb sound! <br> Surround your workspace with plants to create a quiet sanctuary.</h5>
+                              </div>
+
+                              <div class="carousel-item">
+                                <h4 class="my-3"><strong>Plants boost your immune system!</strong></h4>
+                                <h5 class="m-3">Plants are known to be calming, leaving you more relaxed and improving your sleep. <br> They can help you stay happy and healthy!</h5>
+                              </div>
+                        </div>
+                      </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}}
+
+{% block postloadjs %}
+{% endblock %}
