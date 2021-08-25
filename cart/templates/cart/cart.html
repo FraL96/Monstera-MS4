@@ -10,7 +10,27 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center my-5">
+            <h1 class="section-text-title text-green">Your Cart</h1>
 
+            <hr style="height:2px" class="col-6 offset-3 text-grey">
+
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+                <div class="table-responsive rounded"></div>
+            {% else %}
+                <p class="lead mb-5">Helloooo???<br>Is anybody here??? <br><br> Your cart is still empty, keep shopping. <br>
+                    <i class="fab fa-pagelines fa-3x text-green mt-4"><br></i></p>
+                <a href="{% url 'products' %}" class="btn bg-green text-white rounded-pill btn-lg">
+                    <span class="text-uppercase">Shop all</span>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}}
 
 {% block postloadjs %}

@@ -108,7 +108,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-green font-weight-bold{% else %}text-grey{% endif %} nav-link" href="">
+                            <a class="{% if grand_total %}text-green font-weight-bold{% else %}text-grey{% endif %} nav-link" href="{% url 'view_cart' %}">
                                 <div class="">
                                     <div><i class="fas fa-shopping-cart fa-2x"></i></div>
                                     <p class="my-0">
@@ -152,7 +152,7 @@
             <div class="row footer-arrange">
                 <div class="col-2 text-grey text-uppercase">
                     <a href="" class="text-grey"><h5>Shop</h5></a>
-                    <hr>
+                    <hr style="height:2px">
                     <ul>
                         <li><a href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents">Shop all</a></li>
                         <li><a href="{% url 'products' %}?category=big_leaves">Big leaves</a></li>
@@ -164,12 +164,12 @@
 
                 <div class="col-2 text-uppercase">
                     <a href=""><h5>Tips</h5></a>
-                    <hr>
+                    <hr style="height:2px">
                 </div>
 
                 <div class="col-2 text-uppercase">
                     <a href=""><h5>Account</h5></a>
-                    <hr>
+                    <hr style="height:2px">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <ul>
@@ -185,7 +185,7 @@
 
                 <div class="col-2">
                     <a href="" class="text-uppercase"><h5>Contacts</h5></a>
-                    <hr>
+                    <hr style="height:2px">
                     <p><strong>Address:</strong><br> Via della Lapide, 23, Roma (IT) <br>
                         <strong>Phone:</strong><br> 0012345678 <br>
                         <strong>E-mail:</strong> francescalupu1996@gmail.com
@@ -195,7 +195,7 @@
 
                 <div class="col-2 text-uppercase">
                     <a href=""><h5>Payments</h5></a>
-                    <hr>
+                    <hr style="height:2px">
                     <i class="fab fa-cc-visa fa-2x"></i>
                     <i class="fab fa-cc-mastercard fa-2x"></i>
                     <i class="fab fa-cc-stripe fa-2x"></i>
@@ -206,7 +206,7 @@
 
                 <div class="col-2">
                     <a href="" class="text-uppercase"><h5>Newsletter</h5></a>
-                    <hr>
+                    <hr style="height:2px">
                     <div class="text-center">
                         <input type="text" placeholder="Email">
                         <button type="button" class="btn btn-sm rounded-pill border-grey text-grey subscribe">Subscribe</button>
@@ -229,10 +229,10 @@
                 </div>
             </div>
         <!--social links-->
-        <hr>
+        <hr style="height:5px">
         <div class="footer-copyright container-fluid">
             <div class="row">
-                <div class=" col-12 text-center">
+                <div class=" col-12 text-center mb-3">
                     Monstera © 2021 Francesca Lupu
                 </div>
             </div>
