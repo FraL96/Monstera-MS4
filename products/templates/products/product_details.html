@@ -39,10 +39,10 @@
                         </a>
                     </p>
                     {% endif %}
-                    <p class="section-text">{{ product.care}}</p>
+                    <p class="section-text my-5">{{ product.care}}</p>
                 </div>
 
-                <form class="form section-text" action="" method="POST">
+                <form class="form section-text" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
 
                     <div class="row form-group my-5">
