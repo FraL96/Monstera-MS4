@@ -48,10 +48,6 @@ header {
     font-style: normal;
 }
 
-.section-text:hover{
-    color: #CAC8CF;
-}
-
 .no-deco{
     text-decoration: none;
 }
@@ -91,8 +87,16 @@ header {
     color: #5B9A3F;
 }
 
+.transition:hover{
+    color: #5B9A3F;
+}
+
 .nav-link:hover{
     color: #5B9A3F;
+}
+
+.bg-green{
+    background-color: #5B9A3F;
 }
 
 .section-two {
@@ -127,12 +131,11 @@ footer {
     padding: 0px;
 }
 
-
-
-
-
-
-
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+  }
 
 /* from Bulma */
 

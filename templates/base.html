@@ -42,7 +42,7 @@
     <body>
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex ">
-                <div class="col-12 col-lg-7 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}"  class="nav-link main-logo-link">
                         <img src="/media/logo-green.png" alt="Monstera">
                     </a>
@@ -65,12 +65,12 @@
                 </div>
 
                 <!-- Shop tab + dropdown -->
-                <div class="col-12 col-lg-3 my-auto">
+                <div class="col-12 col-lg-4 my-auto">
                     <ul class="list-inline list-unstyled text-lg-right my-0">
                         <li class="list-inline-item dropdown">
                             <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
-                                    <h4 class="my-0">Shop</h4>
+                                    <h4 class="my-0 transition">Shop</h4>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -84,7 +84,14 @@
                         <li class="list-inline-item dropdown">
                             <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
-                                    <h4 class="my-0">Account</h4>
+                                    <h4 class="my-0 transition">Tips</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <h4 class="my-0 transition">Account</h4>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -148,10 +155,10 @@
                     <hr>
                     <ul>
                         <li><a href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents">Shop all</a></li>
-                        <li><a href="{% url 'products' %}?category=big_leaves" class="dropdown-item">Big leaves</a></li>
-                        <li><a href="{% url 'products' %}?category=to_hang" class="dropdown-item">To hang</a></li>
-                        <li><a href="{% url 'products' %}?category=cacti" class="dropdown-item">Cacti</a></li>
-                        <li><a href="{% url 'products' %}?category=succulents" class="dropdown-item">Succulents</a></li>
+                        <li><a href="{% url 'products' %}?category=big_leaves">Big leaves</a></li>
+                        <li><a href="{% url 'products' %}?category=to_hang">To hang</a></li>
+                        <li><a href="{% url 'products' %}?category=cacti">Cacti</a></li>
+                        <li><a href="{% url 'products' %}?category=succulents">Succulents</a></li>
                     </ul>
                 </div>
 

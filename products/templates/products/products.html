@@ -14,7 +14,13 @@
 
     <div class="row">
         <div class="col text-center my-5">
-            <h1 class="section-text-title text-green">All Plants</h1>
+            {% for c in current_categories %}
+                {% if c.name == 'big_leaves,to_hang,cacti,succulents' %}
+                    <h1 class="section-text-title text-green">All Plants</h1>
+                {% else%}
+                    <h1 class="section-text-title text-green">{{ c.friendly_name }}</h1>
+                {% endif %}
+            {% endfor %}
 
             <hr class="col-6 offset-3 text-grey">
             
@@ -64,4 +70,62 @@
     </div>
 </div>
 {% endfor %}
+
+<button type="button" class="btn bg-green btn-floating btn-lg rounded-circle " id="btn-back-to-top">
+  <i class="fas fa-arrow-up text-white" ></i>
+</button>
+
 {% endblock %}}
+
+{% block postloadjs %}
+    {{ block.super }}
+    
+    <script type="text/javascript">
+    let mybutton = document.getElementById("btn-back-to-top");
+    window.onscroll = function () {
+    scrollFunction();
+    };
+
+    function scrollFunction() {
+    if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+    ) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %}
