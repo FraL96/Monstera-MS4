@@ -62,7 +62,8 @@
                                         </button>
                                     </span>
 
-                                    <input class="form-control qty_input border-green text-center" style="width: 20px;" type="number" name="quantity" value="1" min="1" max="50"  id="num" oninput="calc()">
+                                    <input class="form-control qty_input border-green text-center" style="width: 20px;"
+                                        type="number" name="quantity" value="1" min="1" max="50"  id="id_qty_{{ product.id }}" oninput="calc()">
 
                                     <span class="input-group-text p-0 bg-green border-0">
                                         <button class="increment-qty btn p-0"
@@ -104,14 +105,5 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
-        function calc() 
-        {
-        var price = document.getElementById("plant_price").innerHTML;
-        var nPlants = document.getElementById("num").value;
-        var total = parseFloat(price) * nPlants
-        if (!isNaN(total))
-            document.getElementById("total").innerHTML = total.toFixed(2)
-        }
-    </script>
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock%}
