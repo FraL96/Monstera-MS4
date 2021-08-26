@@ -39,6 +39,7 @@
                         </a>
                     </p>
                     {% endif %}
+                    <h5 class="section-text">€<span id="plant_price">{{product.price}}</span></h5>
                     <p class="section-text my-5">{{ product.care}}</p>
                 </div>
 
@@ -49,15 +50,12 @@
 
                         <label class="col-3 col-form-label" for="quantity" ><strong>Quantity:</strong></label>
                         <div class="col-2 w-25">
-                            <input class="form-control qty_input border-green" type="number" name="quantity" value="1" min="1" max="50" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                            <input class="form-control qty_input border-green" type="number" name="quantity" value="1" min="1" max="50"  id="num" oninput="calc()">
                         </div>
                         <div class="col-6 text-end">
-                            <h3>€ {{product.price}}</h3>
+                            <h3>Total : <b>€ <span id="total">{{product.price}}</span></b></h3>
                           </div>
                     </div>
-
-
-
 
                     <div class="row">
                     <div class="col-6 ">
@@ -80,3 +78,17 @@
         </div>
     </div>
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        function calc() 
+        {
+        var price = document.getElementById("plant_price").innerHTML;
+        var nPlants = document.getElementById("num").value;
+        var total = parseFloat(price) * nPlants
+        if (!isNaN(total))
+            document.getElementById("total").innerHTML = total.toFixed(2)
+        }
+    </script>
+{% endblock%}
