@@ -12,7 +12,7 @@ body {
     cursor: pointer;
 }
 
-.remove-link:hover{
+.remove-item:hover{
     color: #CAC8CF;
     cursor: pointer;
 }
