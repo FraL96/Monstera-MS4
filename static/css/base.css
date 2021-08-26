@@ -7,6 +7,20 @@ body {
     padding-top: 60px;
 }
 
+.update-link:hover{
+    color: #CAC8CF;
+    cursor: pointer;
+}
+
+.remove-link:hover{
+    color: #CAC8CF;
+    cursor: pointer;
+}
+
+.text-red{
+    color: red;
+}
+
 header {
     font-family: 'Lora', sans-serif;
 }
