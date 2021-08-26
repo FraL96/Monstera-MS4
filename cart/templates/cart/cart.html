@@ -36,7 +36,7 @@
                             <tr class="text-green section-text text-center">
                                 <td class="my-0 mx-auto w-25">
                                     {% if item.product.image %}
-                                    <img class="img-checkout rounded"
+                                    <img class="img-checkout rounded card-img-top"
                                         src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                     {% else %}
                                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
@@ -69,6 +69,36 @@
                                 </td>
                             </tr>
                             {% endfor %}
+                            {% if free_gift_delta == 0 %}
+                            <tr class="text-green section-text text-center">
+                                <td class="my-0 mx-auto w-25">
+                                    <img class="img-checkout rounded card-img-top"
+                                        src="/media/gift-baby-plant.jpg" alt="Gift baby plant">
+                                </td>
+
+                                <td class="py-3">
+                                    <p class="my-0">
+                                        <strong>FREE baby plant</strong>
+                                    </p>
+                                </td>
+                                <td class="py-3 w-25">
+                                    <p class="my-0">
+                                        <strong>€ 0.00</strong>
+                                    </p>
+                                </td>
+                                <td class="py-3 w-25">
+                                    <p class="my-0">
+                                        <strong>1</strong>
+                                    </p>
+                                </td>
+
+                                <td class="py-3 w-25">
+                                    <p class="my-0">
+                                        <strong>€ 0.00</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            {% endif %}
 
                             <tr>
                                 <td colspan="5" class="pt-5 text-end">
@@ -97,12 +127,14 @@
                         </table>
                     </div>
                     {% else %}
-                    <hr style="height:2px" class="col-6 offset-3 text-grey">
-                    <p class="lead mb-5">Helloooo???<br>Is anybody here??? <br><br> Your cart is still empty, keep shopping. <br>
-                        <i class="fab fa-pagelines fa-3x text-green mt-4"><br></i></p>
-                    <a href="{% url 'products' %}" class="btn bg-green text-white rounded-pill btn-lg">
-                        <span class="text-uppercase">Shop all</span>
-                    </a>
+                    <div class="text-center">
+                        <hr style="height:2px" class="col-6 offset-3 text-grey">
+                        <p class="lead mb-5">Helloooo???<br>Is anybody here??? <br><br> Your cart is still empty, keep shopping. <br>
+                            <i class="fab fa-pagelines fa-3x text-green mt-4"><br></i></p>
+                        <a href="{% url 'products' %}" class="btn bg-green text-white rounded-pill btn-lg">
+                            <span class="text-uppercase">Shop all</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             {% endif %}
