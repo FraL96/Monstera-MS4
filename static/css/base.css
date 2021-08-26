@@ -171,6 +171,18 @@ footer {
     right: 40px;
   }
 
+
+
+  /* ------------------------------- bootstrap toasts */
+
+.toast {
+    position: fixed;
+    top: 90px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+
 /* from Bulma */
 
 .icon {
