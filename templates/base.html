@@ -42,14 +42,14 @@
     <body>
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex ">
-                <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <div class="col-12 col-lg-5 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}"  class="nav-link main-logo-link">
                         <img src="/media/logo-green.png" alt="Monstera">
                     </a>
                 </div>
 
                 <!-- Search bar -->
-                <div class="col-12 col-lg-2 my-4 py-1 py-lg-0">
+                <div class="col-12 col-lg-2 mt-4">
                     <form method="GET" action="{% url 'products'%}">
                         <div class="input-group w-100">
                             <input class="form-control border border-grey rounded-pill" type="text" name="q" placeholder="Search">
@@ -65,12 +65,12 @@
                 </div>
 
                 <!-- Shop tab + dropdown -->
-                <div class="col-12 col-lg-4 my-0">
-                    <ul class="list-inline list-unstyled text-lg-right my-0">
+                <div class="col-12 col-lg-4 offset-lg-1 mt-1">
+                    <ul class="list-inline list-unstyled text-lg-right">
                         <li class="list-inline-item dropdown">
                             <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
-                                    <h4 class="my-0 transition">Shop</h4>
+                                    <h4 class="transition">Shop</h4>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -84,14 +84,14 @@
                         <li class="list-inline-item dropdown">
                             <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
-                                    <h4 class="my-0 transition">Tips</h4>
+                                    <h4 class="transition">Tips</h4>
                                 </div>
                             </a>
                         </li>
                         <li class="list-inline-item dropdown">
                             <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
-                                    <h4 class="my-0 transition">Account</h4>
+                                    <h4 class="transition">Account</h4>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -113,7 +113,9 @@
                                     <div><i class="fas fa-shopping-cart fa-2x"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
-                                            € {{ grand_total|floatformat:2 }}
+                                            <strong>€ {{ grand_total|floatformat:2 }}</strong>
+                                        {% else %}
+                                            <strong>€ 0.00</strong>
                                         {% endif %}
                                     </p>
                                 </div>
