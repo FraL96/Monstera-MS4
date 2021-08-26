@@ -49,7 +49,7 @@
 
                         <label class="col-3 col-form-label" for="quantity" ><strong>Quantity:</strong></label>
                         <div class="col-2 w-25">
-                          <input type="number" class="form-control qty_input border-green" name="quantity" value="1" min="1" max="10" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                            <input class="form-control qty_input border-green" type="number" name="quantity" value="1" min="1" max="50" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                         </div>
                         <div class="col-6 text-end">
                             <h3>€ {{product.price}}</h3>
