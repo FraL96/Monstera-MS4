@@ -62,7 +62,6 @@ header {
 }
 
 .card-img-top {
-    float: none;
     width:  auto;
     object-fit: cover;
 }
@@ -101,6 +100,11 @@ header {
 
 .bg-grey{
     background-color: #CAC8CF;
+}
+
+.img-checkout{
+    height: 150px;
+    width: 150px;
 }
 
 .btn-hover:hover{
