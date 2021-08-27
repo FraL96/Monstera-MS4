@@ -121,6 +121,11 @@ header {
     width: 150px;
 }
 
+.img-preview{
+    height: 80px;
+    width: 80px;
+}
+
 .btn-hover:hover{
     color: #5B9A3F !important;
     border-color: #5B9A3F;
@@ -171,6 +176,12 @@ footer {
     right: 40px;
   }
 
+  .cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 
 
   /* ------------------------------- bootstrap toasts */
@@ -205,6 +216,10 @@ footer {
 .text-grey,
 .btn-grey {
     color: #CAC8CF !important;
+}
+
+.btn-light:hover{
+    color: #CAC8CF;
 }
 
 .border-grey {
