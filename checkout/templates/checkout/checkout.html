@@ -18,56 +18,72 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <hr>
-                <h1 class="mb-4">Checkout</h1>
-                <h3 class="mb-4">You're almost there!</h3>
-                <hr>
+            <div class="col text-green text-center">
+                <hr class="text-grey">
+                <h1 class="my-4 section-text-title display-4"><strong>Checkout</strong></h1>
+                <h6 class="mb-4 section-text">(Yay! You're almost there!)</h6>
+                <hr class="text-grey">
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ product_count }})</p>
-                <div class="row">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
+            <div class="col-12 col-lg-5 offset-lg-1 order-lg-last mb-5">
+                <h4 class="text-white bg-green section-text mb-4 text-center text-uppercase p-2">Guess who's coming home with you</h4>
+                <div class="row text-center text-uppercase">
+                    <div class="col-6 offset-3">
+                        <p class="mb-2 mt-0 text-grey">Item</p>
                     </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                    <div class="col-3">
+                        <p class="mb-2 mt-0 text-grey">Subtotal</p>
                     </div>
                 </div>
                 {% for item in cart_items %}
-                    <div class="row">
-                        <div class="col-2 mb-1">
+                    <div class="row text-center">
+                        <div class="col-3 mb-4">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
-                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                                {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <img class="img-preview rounded card-img-top"
+                                        src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ item.product.name }}">
                                 {% endif %}
+
                             </a>
                         </div>
-                        <div class="col-7">
+                        <div class="col-6 text-green">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-1">{{ item.product.species }}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <div class="col-3">
+                            <p class="my-4 text-muted">€ {{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
-                <hr class="my-0">
-                <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery:</p>
-                        <p class="my-0">Grand Total:</p>
+
+                {% if free_gift_delta == 0 %}
+                <div class="row text-center">
+                    <div class="col-3 mb-2">
+                        <img class="img-preview rounded card-img-top"
+                            src="/media/gift-baby-plant.jpg" alt="FREE Baby Plant">
+                    </div>
+                    <div class="col-6 text-green">
+                        <p class="my-2"><strong>FREE Baby Plant</strong></p>
+                        <p class="my-0 small text-muted">Qty: 1</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0">€{{ total | floatformat:2 }}</p>
-                        <p class="my-0">€{{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-4 text-muted">€ 0.00</p>
+                    </div>
+                </div>
+                {% endif %}
+
+                <hr class="my-2 text-grey">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h5 class="my-1 text-grey">Order Total: €{{ total | floatformat:2 }}</h5>
+                        <h5 class="my-1 text-grey">Delivery: €{{ delivery | floatformat:2 }}</h5>
+                        <h3 class="my-1 text-green"><strong>Grand Total: €{{ grand_total | floatformat:2 }}</strong></h3>
                     </div>
                 </div>
             </div>
@@ -134,13 +150,6 @@
                 </form>
             </div>
         </div>
-    </div>
-    <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
-            <span class="icon">
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
-        </h1>
     </div>
 {% endblock %}
 

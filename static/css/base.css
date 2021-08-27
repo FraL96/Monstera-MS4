@@ -22,7 +22,11 @@ body {
 }
 
 header {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Lora', serif;
+}
+
+body{
+    font-family: 'Lora', serif;
 }
 
 #delivery-banner{
@@ -53,12 +57,12 @@ header {
 }
 
 .section-text-title {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Lora', serif;
     font-style: italic;
 }
 
 .section-text {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Lora', serif;
     font-style: normal;
 }
 
