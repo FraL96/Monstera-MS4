@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container bg-green text-white my-5">
+        <div class="row ">
+            <div class="col text-center">
+                <h1 class="my-4 section-text-title display-4"><strong>You are awesome!</strong></h1>
+                <h5 class="my-4 section-text">Thank you for your order.<br> All the information you need is below. A confirmation email will be sent to <strong>{{ order.email }}</strong> in a few moments.</h5>
+                <hr class="text-grey">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-12 text-center mb-5">
+				<a href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents" class="btn btn-hover text-green rounded-pill bg-white mt-5">
+					<span class="icon mr-2">
+						<i class="fab fa-pagelines"></i>
+					</span>
+
+					<span class="text-uppercase">Keep shopping</span>
+				</a>
+			</div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}

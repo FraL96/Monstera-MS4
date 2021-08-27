@@ -29,6 +29,7 @@ def checkout(request):
             'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
+
         if order_form.is_valid():
             order = order_form.save()
             for item_id, item_data in cart.items():
@@ -96,7 +97,7 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-    if 'cart' in request.session:
+    if 'bag' in request.session:
         del request.session['cart']
 
     template = 'checkout/checkout_success.html'
