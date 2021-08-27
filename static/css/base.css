@@ -12,7 +12,8 @@ body {
     cursor: pointer;
 }
 
-.remove-item:hover{
+.remove-item:hover,
+.login-text:hover {
     color: #CAC8CF;
     cursor: pointer;
 }
