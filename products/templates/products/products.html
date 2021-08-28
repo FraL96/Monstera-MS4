@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container">
+<div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -13,7 +13,7 @@
 <div class="container-fluid">
 
     <div class="row">
-        <div class="col text-center my-5">
+        <div class="col text-center mb-5">
             {% for c in current_categories %}
                 {% if c.name == 'big_leaves,to_hang,cacti,succulents' %}
                     <h1 class="section-text-title text-green">All Plants</h1>

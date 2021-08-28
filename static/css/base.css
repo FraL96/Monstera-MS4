@@ -7,6 +7,10 @@ body {
     padding-top: 60px;
 }
 
+.header-container {
+    padding-top: 3rem;
+}
+
 .update-link:hover{
     color: #CAC8CF;
     cursor: pointer;
