@@ -53,7 +53,8 @@ def remove_from_cart(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     try:
         cart.pop(item_id)
-        messages.error(request, f'Why did you remove {product.name} from the cart? You made it cry!')
+        messages.error(request, f'Why did you remove {product.name} from the cart? \
+            You made it cry!')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
