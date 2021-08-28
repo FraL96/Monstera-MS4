@@ -13,9 +13,9 @@
 <section class="hero-container">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-5 offset-7 my-auto">
-                <h1 class=" section-text hero-text text-grey">
-                    Catch phrase / Slogan
+            <div class="col-12 my-auto">
+                <h1 class=" section-text hero-text text-white display-4 text-center large">
+                    You are in the right place
                 </h1>
             </div>
         </div>
@@ -25,32 +25,61 @@
 <section class="section-two container-fluid h-75">
     <div class="row">
         <div class="col-12  text-center my-5">
-            <h2 class="text-white section-text-title">Favourites of the month</h2>
+            <h2 class="text-white section-text-title">Choose your favorite</h2>
 
             <div class="row my-5 text-green section-text">
-                <div class="col-2 offset-3">
-                    <div class="card">
-                    <img src="/media/aloe.jpg" class="card-img-top img-fav" alt="Aloe">
+
+                <div class="col-2 offset-1">
+                    <a class="login-text" href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents">
+                        <div class="card h-100">
+                            <img src="/media/calathea-orbifolia.jpg" class="card-img-top img-fav" alt="Shop All">
+                            <div class="card-body">
+                                <h5 class="card-title">Shop All</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-2">
+                    <a class="login-text" href="{% url 'products' %}?category=big_leaves">
+                    <div class="card h-100">
+                    <img src="/media/ficus-lyrata.jpg" class="card-img-top img-fav" alt="Big leaves">
                     <div class="card-body">
-                        <h5 class="card-title">Aloe vera</h5>
+                        <h5 class="card-title">Big Leaves</h5>
                     </div>
                     </div>
+                </a>div>
                 </div>
                 <div class="col-2">
+                    <a class="login-text" href="{% url 'products' %}?category=to_hang">
                     <div class="card h-100">
-                    <img src="/media/ficus-lyrata.jpg" class="card-img-top img-fav" alt="Ficus lyrata">
+                    <img src="/media/philodendron-scandens-brasil.jpg" class="card-img-top img-fav" alt="To hang">
                     <div class="card-body">
-                        <h5 class="card-title">Ficus Lyrata</h5>
+                        <h5 class="card-title">To Hang</h5>
                     </div>
                     </div>
+                </a>
                 </div>
                 <div class="col-2">
+                    <a class="login-text" href="{% url 'products' %}?category=succulents">
                     <div class="card h-100">
-                    <img src="/media/fittonia.jpg" class="card-img-top img-fav" alt="Fittonia">
+                    <img src="/media/echeveria.jpg" class="card-img-top img-fav" alt="Succulents">
                     <div class="card-body">
-                        <h5 class="card-title">Fittonia</h5>
+                        <h5 class="card-title">Succulents</h5>
+                    </div>
+                    </div>
+                    </a>
+                </div>
+                
+                <div class="col-2">
+                    <a class="login-text" href="{% url 'products' %}?category=cacti">
+                    <div class="card h-100">
+                    <img src="/media/little-cactus.jpg" class="card-img-top img-fav" alt="Cacti">
+                    <div class="card-body">
+                        <h5 class="card-title">Cacti</h5>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
     </div>
