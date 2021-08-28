@@ -168,53 +168,21 @@
                 </div>
             </div>
 
-            <div class="row footer-arrange">
-                <div class="col-2 text-grey text-uppercase">
-                    <a href="" class="text-grey"><h5>Shop</h5></a>
-                    <hr style="height:2px">
-                    <ul>
-                        <li><a href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents">Shop all</a></li>
-                        <li><a href="{% url 'products' %}?category=big_leaves">Big leaves</a></li>
-                        <li><a href="{% url 'products' %}?category=to_hang">To hang</a></li>
-                        <li><a href="{% url 'products' %}?category=cacti">Cacti</a></li>
-                        <li><a href="{% url 'products' %}?category=succulents">Succulents</a></li>
-                    </ul>
-                </div>
+            <div class="row footer-arrange text-center">
 
-                <div class="col-2 text-uppercase">
-                    <a href=""><h5>Tips</h5></a>
-                    <hr style="height:2px">
-                </div>
-
-                <div class="col-2 text-uppercase">
-                    <a href=""><h5>Account</h5></a>
-                    <hr style="height:2px">
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                        <ul>
-                            <li><a href="">Management</a></li>
-                            {% endif %}
-                                <li><a href="">My Profile</a></li>
-                                <li><a href="{% url 'account_logout' %}">Logout</a></li>
-                    {% else %}
-                        <li><a href="{% url 'account_login' %}">Register/Login</a></li>
-                    {% endif %}
-                        </ul>
-                </div>
-
-                <div class="col-2">
-                    <a href="" class="text-uppercase"><h5>Contacts</h5></a>
+                <div class="col-4">
+                    <h5 class="text-uppercase">Contacts</h5>
                     <hr style="height:2px">
                     <p>
-                        <strong>Address:</strong><br> Via della Lapide, 23, Roma (IT) <br>
-                        <strong>Phone:</strong><br> 0012345678 <br>
+                        <strong>Address:</strong>Via della Lapide, 23, Roma (IT) <br>
+                        <strong>Phone:</strong> 0012345678 <br>
                         <strong>E-mail:</strong> francescalupu1996@gmail.com
                     </p>
 
                 </div>
 
-                <div class="col-2 text-uppercase">
-                    <a href=""><h5>Payments</h5></a>
+                <div class="col-4 text-uppercase">
+                    <h5>Payments</h5>
                     <hr style="height:2px">
                     <i class="fab fa-cc-visa fa-2x"></i>
                     <i class="fab fa-cc-mastercard fa-2x"></i>
@@ -223,15 +191,18 @@
                     <i class="fab fa-cc-amex fa-2x"></i>
                 </div>
 
-                <div class="col-2">
-                    <a href="" class="text-uppercase"><h5>Newsletter</h5></a>
+                <div class="col-4 text-uppercase">
+                    <h5>Newsletter</h5>
                     <hr style="height:2px">
                     <div class="text-center">
-                        <input type="text" placeholder="Email">
-                        <button type="button" class="btn btn-sm rounded-pill border-grey text-grey subscribe">Subscribe</button>
-                        <p class="mt-4"><strong>And follow us on</strong></p>
+                        <input type="text" placeholder="Email"><br>
+                        <button type="button" class="btn btn-sm rounded-pill border-grey text-grey subscribe mt-2">Subscribe</button>
+                        
+                    </div>
+                    </div>
                         <div class="row">
                             <div class="col-12 text-center">
+                                <p class="mt-4"><strong>And follow us on</strong></p>
                                 <a class="m-3 hvr-pop" target="_blank" href="https://www.facebook.com/">
                                     <i class="fab fa-facebook-f fa-2x"></i>
                                 </a>
