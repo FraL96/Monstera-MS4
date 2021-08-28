@@ -44,15 +44,15 @@
 
     <body>
         <header class="container-fluid fixed-top">
-            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex ">
-                <div class="col-12 col-lg-5 my-auto py-lg-0 text-center text-lg-left">
+            <div id="topnav" class="row bg-white pt-lg-2 ">
+                <div class="col-12 col-lg-5 my-auto py-lg-0 text-center text-lg-left d-none d-xxl-block">
                     <a href="{% url 'home' %}"  class="nav-link main-logo-link">
                         <img src="/media/logo-green.png" alt="Monstera">
                     </a>
                 </div>
 
                 <!-- Search bar -->
-                <div class="col-12 col-lg-2 mt-4">
+                <div class="col-12 col-lg-2 mt-4 d-none d-xxl-block">
                     <form method="GET" action="{% url 'products'%}">
                         <div class="input-group w-100">
                             <input class="form-control border border-grey rounded-pill" type="text" name="q" placeholder="Search">
@@ -68,7 +68,7 @@
                 </div>
 
                 <!-- Shop tab + dropdown -->
-                <div class="col-12 col-lg-4 offset-lg-1 mt-1">
+                <div class="col-12 col-lg-4 offset-lg-1 mt-1 d-none d-xxl-block">
                     <ul class="list-inline list-unstyled text-lg-right">
                         <li class="list-inline-item dropdown">
                             <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -127,6 +127,7 @@
                     </ul>
                 </div>
             </div>
+            {% include 'includes/mobile-navbar.html' %}
             <div id="gift-banner" class="row text-center">
                 <div class="col text-white">
                     <h4 class="my-1">Every €{{ free_gift_threshold }} spent, a free baby plant for you!</h4>                
