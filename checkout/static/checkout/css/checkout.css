@@ -31,20 +31,21 @@
 }
 
 #payment-form .form-control,
-#card-element {
+#card-element{
     color: #5b9a3f;
     border: 2px solid #5b9a3f;
 }
 
 select,
-select option{
-  color: #000000;
+select option {
+    color: #000000;
 }
 
 select:invalid,
-select option[value=""]{
-  color: #aab7c4 !important;
+select option[value=""] {
+    color: #aab7c4 !important;
 }
+
 
 #loading-overlay {
 	display: none;
