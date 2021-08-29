@@ -17,9 +17,29 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="text-center section-text-title text-green"><strong>Welcome back, {{ profile }}</strong></h1>
+                <h1 class="text-center section-text-title text-green"><strong>Welcome back, plant lover</strong></h1>
                 <hr style="height:2px" class="col-6 offset-3 text-grey">
             </div>
         </div>
     </div>
+    <div class="row mx-auto">
+        <div class="col-12 col-lg-5 offset-lg-1">
+            <p class="text-muted">Your Delivery Information</p>
+            <form class="mt-3 text-center text-green" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn bg-green text-white rounded-pill text-uppercase float-right mb-3">Update Information</button>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p class="text-muted">Order History</p>
+            {{ orders }}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
