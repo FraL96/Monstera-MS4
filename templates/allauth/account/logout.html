@@ -10,7 +10,7 @@
     <div class="container border-green mb-4">
       <h1 class="section-text-title text-green mb-4 display-4">{% trans "Sign Out" %}</h1>
 
-      <p>{% trans 'Are you sure you want to sign out? We're gonna to miss you :(' %}</p>
+      <p>{% trans 'Are you sure you want to sign out? We are gonna miss you :(' %}</p>
 
       <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
