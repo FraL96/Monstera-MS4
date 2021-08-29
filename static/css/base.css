@@ -122,6 +122,10 @@ body{
     color: #5B9A3F;
 }
 
+.minimenu{
+    max-width: 50%;
+}
+
 .bg-green{
     background-color: #5B9A3F;
 }
