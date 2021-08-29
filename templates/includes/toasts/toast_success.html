@@ -13,7 +13,11 @@
                 {% for item in cart_items %}
                     <div class="row section-text text-center">
                         <div class="col-4 mt-2">
+                            {% if item.product.image %}
                             <img class="img-preview rounded card-img-top" src="{{ item.product.image.url }}">
+                            {% else %}
+                            <img class="img-preview rounded card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-4">
                             <p class="mt-4"><strong>{{ item.product.name }}</strong></p>
