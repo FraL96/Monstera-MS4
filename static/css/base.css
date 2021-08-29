@@ -118,6 +118,10 @@ body{
     color: #5B9A3F;
 }
 
+.btn-hover-reverse:hover{
+    color: #CAC8CF;
+}
+
 .nav-link:hover{
     color: #5B9A3F;
 }
