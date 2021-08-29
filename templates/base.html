@@ -53,6 +53,7 @@
                 </div>
 
                 <!-- Search bar -->
+
                 <div class="col-12 col-lg-2 mt-4 d-none d-xxl-block">
                     <form method="GET" action="{% url 'products'%}">
                         <div class="input-group w-100">
@@ -128,11 +129,16 @@
                     </ul>
                 </div>
             </div>
+        </nav>
             {% include 'includes/mobile-navbar.html' %}
+            <div class="row">
+                <div class="col">
             <div id="gift-banner" class="row text-center">
                 <div class="col text-white">
                     <h4 class="my-1">Every €{{ free_gift_threshold }} spent, a free baby plant for you!</h4>                
-                </div>            
+                </div>  
+                </div>
+                </div>          
             </div>
         </header>
 
