@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.header-container {
+    padding-top: 3rem;
+}
+
+.update-link:hover{
+    color: #CAC8CF;
+    cursor: pointer;
+}
+
+.login-text{
+    color: #5b9a3f;
+    text-decoration: none;
+}
+
+.remove-item:hover,
+.login-text:hover {
+    color: #CAC8CF;
+    cursor: pointer;
+}
+
+.text-red{
+    color: red;
+}
+
+header {
+    font-family: 'Lora', serif;
+}
+
+body{
+    font-family: 'Lora', serif;
+}
+
+#gift-banner{
+    background-color: #5B9A3F;
+}
+
+.carousel {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.carousel-inner{
+    height: 150px;
+}
+
+.hero-container {
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    color : #CAC8CF;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.minilogo{
+    max-width: 20%;
+    height: auto;
+}
+
+.section-text-title {
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+.section-text {
+    font-family: 'Lora', serif;
+    font-style: normal;
+}
+
+.no-deco{
+    text-decoration: none;
+}
+
+.no-deco:hover{
+    color: #CAC8CF;
+}
+
+.hero-text {
+  top: 40%;
+  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+
+.card-img-top {
+    width:  auto;
+    object-fit: cover;
+}
+
+.img-fav{
+    height: 200px;
+}
+
+.prod-img{
+    height: 350px;
+}
+
+.detail-img{
+    height: 500px;
+}
+
+.nav-link{
+    color: #CAC8CF;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #5B9A3F;
+}
+
+.transition:hover{
+    color: #5B9A3F;
+}
+
+.btn-hover-reverse:hover{
+    color: #CAC8CF;
+}
+
+.nav-link:hover{
+    color: #5B9A3F;
+}
+
+.minimenu{
+    max-width: 50%;
+}
+
+.bg-green{
+    background-color: #5B9A3F;
+}
+
+.bg-grey{
+    background-color: #CAC8CF;
+}
+
+.img-checkout{
+    height: 150px;
+    width: 150px;
+}
+
+.img-preview{
+    height: 80px;
+    width: 80px;
+}
+
+.img-summary{
+    height: 50px;
+    width: 50px;
+}
+
+.btn-hover:hover{
+    color: #5B9A3F !important; 
+    border-color: #5B9A3F;
+    background-color: #ffffff;
+    
+}
+
+.form-control .qty-input {
+    display: inline;
+    margin-top: -50px;
+}
+
+.section-two {
+    background-color: #5B9A3F !important; ;
+}
+
+.accordion-button{
+    text-align: center;
+}
+
+footer {
+    background-color: #5B9A3F !important;
+    color: #CAC8CF;
+    font-family: 'Lora', serif;
+    font-style: normal;
+    margin-bottom: 0%;
+}
+
+.footer-arrange{
+    margin-left: 15px;
+}
+
+.page-footer a {
+    text-decoration: none;
+    color: #CAC8CF;
+}
+
+.page-footer li {
+    list-style-type: none;
+}
+
+.page-footer ul {
+    padding: 0px;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+  }
+
+  .cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+  /* ------------------------------- bootstrap toasts */
+
+.toast {
+    position: fixed;
+    top: 90px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+
+/* from Bulma */
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #5B9A3F;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.text-grey,
+.btn-grey {
+    color: #CAC8CF !important;
+}
+
+.btn-light:hover{
+    color: #CAC8CF;
+}
+
+.border-grey {
+    border: 1px solid #CAC8CF !important;
+}
+.text-green,
+.btn-green{
+    color: #5B9A3F;
+}
+
+.border-green{
+    border: 1px solid #5B9A3F !important; 
+}
+
+.dropdown-item{
+    color: #5B9A3F;
+}
+
+.text-white{
+    color: #ffffff;
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/* -------------------------------- Media Queries */
+
+/*--------------------- Hide arrows in input number----*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
