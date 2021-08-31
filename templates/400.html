@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| 400 {% endblock %}
+
+{% block content %}
+<div class="row py-5">
+    <div class="col-6 offset-3 text-center">
+        <div class="container mb-4">
+        <h1 class="section-text-title text-green mb-4 display-4">400<br>Bad request</h1>
+        <h4 class="section-text text-grey mt-2">Ooops, something went wrong.</h4>
+        <div class="py-3">
+            <a class="btn btn-hover text-white bg-green rounded-pill text-uppercase mt-5 mb-2" href="{% url 'home' %}">Go to homepage</a>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
