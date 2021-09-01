@@ -13,7 +13,7 @@
 <div class="container-fluid">
 
     <div class="row">
-        <div class="col text-center mb-5">
+        <div class="col-12 text-center mb-5">
             {% for c in current_categories %}
                 {% if c.name == 'big_leaves,to_hang,cacti,succulents' %}
                     <h1 class="section-text-title text-green">All Plants</h1>
@@ -24,7 +24,7 @@
 
             <hr style="height:2px" class="col-6 offset-3 text-grey">
             
-        <div class="row w-100">
+        <div class="row">
             <div class="col-5 offset-1 my-2">
                 <p class="text-grey">
                     {% if search_term %}
@@ -50,17 +50,16 @@
         </div>
 
         {% if products|length < 1 %}
-            <div class="row w-100">
+            <div class="row">
                 <div class="col-12 my-5">
                         <h3 class="text-center text-green"><strong>Sorry, we don't have this plant yet :(</strong></h3>
                 </div>
             </div>
             {% endif %}
 
-    <div class="row">
         {% for product in products %}
-        <div class="row w-100">
-            <div class="col-3 offset-3">
+        <div class="row">
+            <div class="col-lg-3 offset-lg-3">
                 <a href="{% url 'product_detail' product.id %}">
                 <div class="card mb-3">
                     {% if product.image %}
@@ -70,14 +69,14 @@
                     {% endif %}
                 </div></a>
             </div>
-            <div class="col-3 text-center mt-5 section-text-title text-green">
+            <div class="col-lg-3 text-center mt-5 mb-4 section-text-title text-green">
                 <h4><strong>{{ product.name }}</strong></h4>
                 <h5>{{ product.species }}</h5>
                 <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                 {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        <a class="text-danger confirm-delete" href="{% url 'delete_product' product.id %}">Delete</a>
                     </small>
                 {% endif %}
             </div>
@@ -138,6 +137,10 @@
 
                 window.location.replace(currentUrl);
             }
+        })
+
+        $(document).on('click', '.confirm-delete', function(){
+            return confirm('Are you sure you want to delete this plant?');
         })
     </script>
 {% endblock %}
