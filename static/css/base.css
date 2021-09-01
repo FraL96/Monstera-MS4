@@ -21,10 +21,6 @@ body {
     text-decoration: none;
 }
 
-.border-green-blog{
-    border: #5B9A3F solid 4px;
-}
-
 .remove-item:hover,
 .login-text:hover {
     color: #CAC8CF;
