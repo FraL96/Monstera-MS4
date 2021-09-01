@@ -31,7 +31,6 @@ Click [here](https://monstera-ms4.herokuapp.com/) to discover Monstera.
         - [Images](#Images)
         - [Defensive Design](#Defensive-Design)
         - [Navigation](#Navigation)
-        - [ER Diagram](#ER-Diagram)
         - [Data Modelling](#Data-Modelling)
         - [Use of Database](#Use-of-Database)
         - [Wireframes](#Wireframes)
@@ -134,3 +133,68 @@ The main technologies to be used are [HTML](https://en.wikipedia.org/wiki/HTML),
 * As a user, I want to see clearly what I am about to order and how much will the total be.
 * As a user, I want to be able to fill in / retrieve my details and order.
 * As a user, I will need an order number to track my package.
+
+## Design
+
+### Color Use
+
+The website color scheme is consistent in the entire website and uses 3 colors, the green #5B9A3F, the grey #CAC8CF and the white #FFFFFF. The green is been chosen to match the main product of the website, plants. The grey is been used mainly for the text and to create a contrast with the green but maintaining an elegant style. And the white is been used to highlight other colors and give an elegant and modern look to the whole website.
+
+![color palette](./image)
+
+### Fonts
+
+The font that I used for the whole website is Lora with a fallback of serif. The font is been taken from [Google Fonts](https://fonts.google.com/).
+
+I chose this this font because in my opinion it suits the website and the style really well. To distinguish between the different types of text (title, paragraph, button...) I used different styles of the same font, like normal, **bold** or *italic*.
+
+![font](./image)
+
+### Icons
+
+The icons used in this website are all from [Font Awesome](https://fontawesome.com/) and are used to better communicate the action of a button or the content of a tab and generally beautify the website.
+
+### Images
+
+The images are all been taken from [Unsplash]() in order to be without copyright.
+The shortcut icon instead is been taken from [Favicon.io](https://favicon.io/) and it represents a leaf of the Monstera Deliciosa plant.
+
+### Defensive Design
+
+To inprove the safety of the website and protect its users, some measures have been used to avoid the misuse of forms:
+
+* Newsletter
+
+* The login and register pages have been added whit the [Allauth]() library and it takes care that the requirements for the fields are respected.
+
+* When registering, an email will be sent to the email address used for the registration and the user will have to verify its identity by clicking on the provided link before being able to login.
+
+* When selecting 'logout', the website will ask again if the user really wants to logout.
+
+* When checking out, some fields of the shipping details will be required.
+
+* When checking out, the 'phone-number' field will accept just digits, while the 'full name' one, will accept just letters anad spaces.
+
+* Defensive error pages have been also created for the codes 400, 403, 404 and 500.
+
+### Navigation
+
+The website is been created with the user in mind. The scope is to make it as userfriendly and as instuitive as possible.
+Here below you can find the navigation scheme.
+
+![font](./image)
+
+### Data Modelling
+
+Tables to do
+
+### Use of Database
+
+In the developement phase the database used was sqlite3 (Django's default). On deployment instead, PostgreSQL is been used in Heroku.
+
+### Wireframes
+
+Here below you find the wireframes created to develop this website:
+
+(Table with wireframes)
+
