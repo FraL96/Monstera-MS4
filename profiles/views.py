@@ -6,6 +6,7 @@ from .forms import UserProfileForm
 from django.contrib.auth.decorators import login_required
 from checkout.models import Order
 
+
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -21,6 +22,7 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
+
 
 
     template = 'profiles/profile.html'
