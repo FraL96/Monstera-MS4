@@ -198,3 +198,7 @@ Here below you find the wireframes created to develop this website:
 
 (Table with wireframes)
 
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
+
