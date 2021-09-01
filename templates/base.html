@@ -47,6 +47,7 @@
     <body class="m-0">
         
     {% include 'includes/header.html' %}
+    {% include 'includes/mobile-header.html' %}
 
         {% if messages %}
             <div class="message-container">
@@ -148,6 +149,17 @@
             $('.toast').toast('show');
             });
         </script>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 
         
         {% endblock %}

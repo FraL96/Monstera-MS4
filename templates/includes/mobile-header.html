@@ -1,0 +1,106 @@
+<header class="container-fluid fixed-top m-0 p-0 d-block d-xxl-none"> <!-- Always visible, hidden on xxl-->
+    <nav class="navbar navbar-expand-xxl navbar-light bg-light m-0 p-0">
+        
+        <div class="container-fluid">
+            
+                <div class="col-6 my-auto py-lg-0 text-start text-lg-left d-none d-lg-block"> <!-- Always hidden, visible on large -->
+                    <a href="{% url 'home' %}"  class=" navbar-brand main-logo-link">
+                        <img src="{{ MEDIA_URL }}logo-green.png" alt="Monstera">
+                    </a>
+                </div>
+
+                <div class="col-4 col-sm-3 text-start d-block d-lg-none"> <!-- Always visible, hidden on large -->
+                    <a href="{% url 'home' %}"  class=" navbar-brand main-logo-link ">
+                        <img class="minimenu" src="{{ MEDIA_URL }}logo-minimenu.png" alt="Monstera">
+                    </a>
+                </div>
+
+                
+
+
+        <!-- Search bar -->
+       
+
+                <div class="col-4 col-sm-4 col-lg-2 mt-3">
+                    <form method="GET" action="{% url 'products'%}">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-grey rounded-pill" type="text" name="q" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="form-control btn border border-grey rounded-pill" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search "></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+        <!-- Shop tab + dropdown -->
+                <div class="col-4 col-sm-5 col-lg-4 text-center mt-2">
+                    <ul class="list-inline list-unstyled text-lg-right">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <i class="fab fa-pagelines fa-2x transition d-none d-sm-block"></i>
+                                    <i class="fab fa-pagelines transition d-block d-sm-none"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                <a href="{% url 'products' %}?category=big_leaves,to_hang,cacti,succulents" class="dropdown-item">Shop all</a>
+                                <a href="{% url 'products' %}?category=big_leaves" class="dropdown-item">Big leaves</a>
+                                <a href="{% url 'products' %}?category=to_hang" class="dropdown-item">To hang</a>
+                                <a href="{% url 'products' %}?category=cacti" class="dropdown-item">Cacti</a>
+                                <a href="{% url 'products' %}?category=succulents" class="dropdown-item">Succulents</a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <i class="fas fa-pencil-alt fa-2x transition d-none d-sm-block"></i>
+                                    <i class="fas fa-pencil-alt transition d-block d-sm-none"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a class="text-grey nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <i class="fas fa-child fa-2x transition d-none d-sm-block"></i>
+                                    <i class="fas fa-child transition d-block d-sm-none"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="{% url 'add_product' %}" class="dropdown-item">Add products</a>
+                                    {% endif %}
+                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-green font-weight-bold{% else %}text-grey{% endif %} nav-link" href="{% url 'view_cart' %}">
+                                <div class="text-center">
+                                    <div>
+                                        <i class="fas fa-shopping-cart fa-2x transition d-none d-sm-block"></i>
+                                        <i class="fas fa-shopping-cart transition d-block d-sm-none"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="gift-banner" class="row text-center">
+        <div class="col text-white">
+            <h4 class="my-1">Every €{{ free_gift_threshold }} spent, a free baby plant for you!</h4>                
+        </div>  
+    </div>
+</header>
