@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center section-text-title text-green my-3"><strong>You bring the questions, we bring the answers</strong></h1>
+                <hr style="height:2px" class="col-6 offset-3 text-grey my-5">
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-6 offset-3">
+            <h5 class="text-green section-text my-4">About ORDERS & DELIVERY</h5>
+            <div class="accordion" id="accordiondelivery">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed uppercase" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Do you deliver outside Europe?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordiondelivery">
+                        <div class="accordion-body">
+                            <p>
+                                Despite a lot of interest it is unfortunately not yet possible for us to ship outside Europe because the journey is too stressful for our plants and can cause them damage. Our team is working hard to find a way of packaging them safely to provide a solution for this, and as soon as we find a safe shipping method we will announce it on social media. Stay tuned!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed uppercase" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            I love nature, how sustainable is the plants packaging?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordiondelivery">
+                        <div class="accordion-body">
+                            <p>
+                                Well you’ve come to the right place. We love plants (and nature), and our goal is to become 100% sustainable.<br>
+                                Unfortunately finding the right sustainable packaging is still a real challenge but we are constantly trying to improve.<br>
+                                All of our packaging is made from water bottles and other recycled materials.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed uppercase" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Will I get exactly the same plant as in the product photo?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordiondelivery">
+                        <div class="accordion-body">
+                            <p>
+                                Our plants are grown naturally in our greenhouse so depending on the season, the weather, 
+                                the parent plant and the age of the plant, the actual plant you will receive might vary a bit from what you see in the picture on the online store.<br>
+                                In this way every plant is a unique object, and we wouldn’t have it any other way.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed uppercase" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            How long does it take for me to receive my beautiful order?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordiondelivery">
+                        <div class="accordion-body">
+                            <p>
+                                It’s great to hear you are adding to your collection!<br>
+                                Have no fear, we ship orders every day. We will constantly send you e-mails to inform you about where your plant is, but usually, not more then a week.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed uppercase" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Help!! My plant has arrived damaged. What do I do now?!
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordiondelivery">
+                        <div class="accordion-body">
+                            <p>
+                                That’s terrible news. Though, it sometimes happens, it’s always upsetting to hear.<br>
+                                If this happens, send us immediately an e-mail describing the nature of your issue and a picture of the broken order to francescalupu1996@gmail.com.<br>
+                                We will have a talk and decide if there is any way to save your new plant or if to proceed with a refund.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="text-green section-text my-4">About RETURNS</h5>
+            <div class="accordion" id="accordionreturn">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed uppercase" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                            What is your return policy?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#accordionreturn">
+                        <div class="accordion-body">
+                            <p>
+                                Unfortunately, perishable products like plants, cannot be returned.<br>
+                                In case your new green roommate was delivered in bad conditions, please contact us and we will find a solution together. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

@@ -210,6 +210,15 @@ footer {
     overflow-y: auto;
 }
 
+.accordion-button:not(.collapsed) {
+    color: #CAC8CF;
+    background-color: #5B9A3F;
+}
+
+.accordion-button:focus {
+    border: 0px;
+}
+
 
 
   /* ------------------------------- bootstrap toasts */
