@@ -62,7 +62,7 @@ body{
 }
 
 .minilogo{
-    max-width: 20%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -296,6 +296,17 @@ footer {
 
 /* -------------------------------- Media Queries */
 
+
+@media (min-width: 992px) {
+    .minilogo{
+        max-width: 20%;
+        height: auto;
+    }
+
+}
+
+
+
 /*--------------------- Hide arrows in input number----*/
 
 /* Chrome, Safari, Edge, Opera */
@@ -309,3 +320,4 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
