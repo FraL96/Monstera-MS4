@@ -1,104 +1,136 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">MONSTERA</h1>
+<h2 align="center">the future is green</h2>
 
-Welcome FraL96,
+![intro](./add picture devices)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+Monstera is a project born from a passion. In the last year I discovered my big love for plants of every kind.
+At the moment I share my house with over 50 plants, some bought and some grown from seeds (took from a shop or directly from the vegetables and fruit in my fridge). And almost every month the family grows a bit bigger.
+I decided to create Monstera as an e-commerce shop, where users can bring home some of the most beautiful plants that exist, but also as a blog where to share with the visitors thought and tips about this beautiful green world.
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Click [here](https://monstera-ms4.herokuapp.com/) to discover Monstera.
 
 ---
 
-Happy coding!
+# Table of contents
+
+1. [User Experience](#User-Experience)
+    - [Project Goals](#Project-Goals)
+    - [User Stories](#User-Stories)
+        - [Website](#Website)
+        - [Homepage](#Homepage)
+        - [Shop](#Shop)
+        - [Product View](#Product-View)
+        - [Tips](#Tips)
+        - [Login / Registration](#Login-/-Registration)
+        - [Profile](#Profile)
+        - [Cart - Checkout](#Cart-Checkout)
+    - [Design](#Design)
+        - [Color Use](#Color-Use)
+        - [Fonts](#Fonts)
+        - [Icons](#Icons)
+        - [Images](#Images)
+        - [Defensive Design](#Defensive-Design)
+        - [Navigation](#Navigation)
+        - [ER Diagram](#ER-Diagram)
+        - [Data Modelling](#Data-Modelling)
+        - [Use of Database](#Use-of-Database)
+        - [Wireframes](#Wireframes)
+2. [Features](#Features)
+    - [Existing Features](#Existing-Features)
+    - [Future Features](#Future-Features)
+3. [Technologies Used](#Technologies-Used)
+4. [Testing](#Testing)
+5. [Deployment](#Deployment)
+6. [Credits](#Credits)
+    - [Content](#Content)
+    - [Media](#Media)
+    - [Code](#Code)
+7. [Acknowledgements](#Acknowledgements)
+8. [Disclaimer](#Disclaimer)
+
+---
+
+# User Experience
+
+## Project Goals
+
+This project is being submitted as the forth and last Milestone Project in partial fulfillment of the Full Stack Developement Program at Code Institute.
+The aim of this Milestone was to build a full-stack site based on business logic used to control a centrally-owned dataset.
+The website had to use authentification mechanisms and provide paid access to the site's data, in this case for the purchase of products.
+
+The main technologies to be used are [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), [JS](https://www.javascript.com/), [Python](https://www.python.org/), [Django](), [Postgres](), and [Stripe]() + additional libraries.
+
+## User Stories
+
+### Website
+
+* As a website owner, I want to create a website where users will be able to shop for plants and order their favourites. 
+* As a website owner, I want people to be able find fun facts and tips about how to take care of their plant.
+* As a website owner, I want to make a profit from the sell of plants on my website.
+
+* As a user, I want to be able to shop and order plants on the website. 
+* As a user, I want to find information on how to take care of my plants.
+
+
+### Homepage
+
+* As a website owner, I want the user to be able to understand the purpose of the website and be able to access the different tabs. 
+* As a website owner, I want the user to find means to contact us in case of any question or problem.
+* As a website owner, I want the homepage to be attractive for the user.
+* As a website owner, I want the user to find a response to all questions about ordering plants on Monstera.
+
+* As a user I want to be able to easily navigate the website.
+* As a user, I want to find everything I am looking for in just a few clicks.
+
+
+### Shop
+
+* As a website owner I want to provide the user with a good range of products and make it easy to distinguish between the categories.
+* As a website owner, I want the user to be able to filter the products in order to easily identify what he/she is looking for.
+
+* As a user I want to easily browse through the products to find something I like.
+
+
+### Product View
+
+* As a website owner, I want to provide information on the plant and how to care for it so the user can decide if is the right plant for them.
+* As a website owner, I want the user to clearly see the price.
+* As a website owner, I want to give the possibility to the user to add the plant to their cart.
+
+* As a user, I want to understand if it is the right plant for me by reading something about it.
+* As a user, I want to know how much am I going to pay for the plant(s) I picked.
+* As a user, I want to be able to add plants to my cart.
+
+### Tips
+
+* As a website owner, I want the user to find, beside plants, also information and fun facts about them.
+* As a website owner, I want the user to be able to comment on my articles to give his/her opinion or to ask  more information.
+
+* As a user, I want to buy a new plant but I also want to see how the website advise me to behave with it to make it thrive.
+* As a user, I want to be able to comment and share my opinion or ask for more tips about my plant(s).
+
+
+### Login / Registration
+
+* As a website owner, I want users to give to the user a personalized experience by giving the possibility to create an account.
+
+* As a user, if I like the website, I want to have a personal account in it.
+
+### Profile
+
+* As a website owner, I want to give the possibility to the user to create a profile so they can store their information and review past order.
+* As a website owner, I want the users that create an account to access extra features to thank them for their loyalty.
+
+* As a user, I want to create an account with the company so I will not have to insert my information for every order
+* As a user, I want to create an account on the website to always have a place where to review past orders.
+* As a user, I would like my loyalty to be appreciated by giving me access to extra contents and/or discounts.
+
+### Cart - Checkout
+
+* As a website owner, I want the user to be able to finalize their order. In order to do so I will provide an overview of the cart (with possibility to add and remove articles). 
+* As a website owner, once the user is ready for the checkout, I want them to be able to fill in their information and payment method.
+* As a website owner, I will provide the user with an overview about what they just bought and the order number for an easy tracking.
+
+* As a user, I want to see clearly what I am about to order and how much will the total be.
+* As a user, I want to be able to fill in / retrieve my details and order.
+* As a user, I will need an order number to track my package.
