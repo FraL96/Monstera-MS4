@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center section-text-title text-green"><strong>Welcome to Tips!</strong></h1>
+                <hr style="height:4px" class="col-6 offset-3 text-grey">
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-8 offset-2 mt-3 text-center">
+            {% for article in article_list %}
+            <div class="card mb-4 border-green-blog">
+                <div class="card-body">
+                    <h2 class="card-title section-text-title text-green"><strong>{{ article.title }}</strong></h2>
+                    <p class="card-text text-grey">{{ article.author }} | {{ article.created_on}} </p>
+                    <p class="card-text">{{article.content|slice:":200" }}</p>
+                    <a href="{% url 'article_detail' article.slug  %}" class="btn btn-hover text-white rounded-pill bg-green">Read More &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock%}

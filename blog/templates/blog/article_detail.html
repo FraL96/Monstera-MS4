@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-10 offset-1 card mb-4 mt-3 bg-green text-white text-center">
+      <div class="card-body">
+        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+        <p class=" text-grey">{{ article.author }} | {{ article.created_on }}</p>
+        <p class="card-text ">{{ object.content | safe }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
