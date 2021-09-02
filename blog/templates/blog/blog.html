@@ -19,8 +19,6 @@
         </div>
     </div>
 
-{% if user.is_authenticated %}
-
 <div class="container">
     <div class="row">
         <!-- Blog Entries Column -->
@@ -38,26 +36,4 @@
         </div>
     </div>
 </div>
-
-{% else %}
-
-<div class="container">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-8 offset-2 mt-3 text-center">
-            {% for article in article_list %}
-            <div class="card mb-4 border-green-blog">
-                <div class="card-body">
-                    <h2 class="card-title section-text-title text-green"><strong>Hello Plant Lovers</strong></h2>
-                    <p class="card-text text-grey"> Sign Up or Login to enter our community. You will find really interesting articles
-                        about plants and not only. YOu will also have the possibility to chat with other fellow plant lovers.<br>
-                        We can't wait for you to join! </p>
-                    <a href="{% url 'home'  %}" class="btn btn-hover text-white rounded-pill bg-green">Go back home</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-{% endif %}
 {% endblock %}

@@ -9,10 +9,6 @@ class ArticleList(generic.ListView):
     template_name = 'blog/blog.html'
 
 
-# class ArticleDetail(generic.DetailView):
-    # model = Article
-    # template_name = 'blog/article_detail.html'
-
 
 def article_detail(request, slug):
     template_name = 'blog/article_detail.html'

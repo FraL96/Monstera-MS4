@@ -30,7 +30,7 @@ def subscribe(email):
     return s.status_code, s.json()
 
 
-def email_list_signup(request):
+def email_collect(request):
 
     form = EmailSubscribeForm(request.POST or None)
 

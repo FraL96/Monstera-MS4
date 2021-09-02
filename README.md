@@ -213,7 +213,7 @@ Clicking on the logo, the user will be redirected home. On smaller devices, the 
 The search bar in the center will help the user search plants (the queries are extended to both the name and the species of the plant).
 On the right side, instead, there are the main four tabs:
 - Shop: by clicking it a dropdown will display the categories of the plant and the user will be able to choose his/her favourite.
-- Tips: a blog accessible for authenticated users. In Tips there will be articles about how to take care of the plants. There is also a comment section under the blog so that the users can interact with the website.
+- Tips: a blog wher user will find articles about how to take care of the plants. There is also a comment section under the blog so that the users can interact with the website.
 - Account: no click of this tab a dropdown menu will appear and the user will be able to decide if to Login or Register. After authentification, the user will be able to also access its profile tab.
 - Cart: this tab will allow the user to access the cart and checkout. However, even without clicking it this tab have some functions. When the user will add product in its cart, the total amount under the cart will grow. Also from the same point a toast notification will show up in different moments to inform or warn the guest, In the toast there will be also a little preview of what's in the cart. 
 
@@ -246,7 +246,26 @@ The homepage is divided in 3 areas:
 
 * Shop
 
-This section is divided into 5 categories (Shop All, Big leaves, To hang, Succulents and Cacti). On the vew of any category there will be a picture of the plant and near it the Name, Species and price. In the website owner view, it will also be visible an edit and a delete button.
+This section is divided into 5 categories (Shop All, Big leaves, To hang, Succulents and Cacti). On the page of any category there will be a picture of the plant and near it the Name, species and price. In the website owner view, it will also be visible an edit and a delete button.
 
 <img src="readme/images/shop.png" alt="All recipes" width="500px">
 
+* Product details
+
+After clicking on a plant, the user will access the product view where will find the same information from the shop view plu more details about the plant and how to take care of it. Moreover there will be also the possiblity to select how many plants of the same kind the user want to purchase (the price will grow in real time with the change of quantity to help the user)and a button to move the plants to the cart.
+
+* Tips
+
+Tips is a blog everyone can view. There is first an overview of the articles and, when clicking on one of them the user will access a second page. The second page will have the entire text of the article selected plus a section below where to view past comments and add new ones. The comments that will be submitted will have to be approved by the website moderator before appearing underneath the article.
+
+* Account
+
+In this tab a not authenticated user will have the possibility to login or register. The authenticated user instead, will be able to access his/her profile page. The profile page is divided in 2 zones. In one the user can save his/her delivery information to avoid writing it for every order. In the second part the user can view and access the 'confirmation' page of past orders and review all the information.
+
+* Cart
+
+In the cart the user will find all the plants he previously added, the quantities and the total price. Users that spend over €100 euros will not have to pay for delivery, while the ones that will not reach this sum will pay a 10% of their cart. Moreover at Monstera at the moment there is a promotion: for every €80 spent, we will send to the user also a free baby plant. The user will be informed of this by the banner under the navbar or by the fact that if the cart contains already €80 euros of products, a new line will be added with the gift.
+
+* Checkout
+
+Once the user 
