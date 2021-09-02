@@ -43,5 +43,5 @@ def email_collect(request):
             else:
                 subscribe(form.instance.email)
                 form.save()
-                messages.info(request, "Your are succesfully subscribed!")
+                messages.success(request, "Your are succesfully subscribed!")
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
