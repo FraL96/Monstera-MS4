@@ -45,7 +45,7 @@
                         <a class="text-danger confirm-delete" href="{% url 'delete_product' product.id %}">Delete</a>
                     </small>
                 {% endif %}
-                    <p class="section-text my-5">{{ product.care}}</p>
+                    <p class="section-text my-5">{{ product.description}}</p>
                 </div>
 
                 <form class="form section-text" action="{% url 'add_to_cart' product.id %}" method="POST">

@@ -14,15 +14,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col mb-5">
-            <h1 class="section-text-title text-green text-center mb-5 display-4">Your Cart</h1>
+            <h1 class="section-text-title text-green text-center my-1 display-4">Your Cart</h1>
 
-            <!-- Table -->
+            <!-- Table desktop -->
 
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-8 offset-2">
                     {% if cart_items %}
-                    <div class="table-responsive">
-                        <table class="table">
+                    <div class="table-responsive d-none d-lg-block pt-5">
+                        <table class="table ">
                             <thead class="thead-light bg-green text-center">
                                 <tr class="section-text text-white">
                                     <th scope="col">Item</th>
@@ -128,49 +128,179 @@
                                     </p>
                                 </td>
                             </tr>
-                            {% endif %}
-
-                            <tr>
-                                <td colspan="5" class="pt-5 text-end">
-                                    <h6 class="section-text text-grey"><strong>Total: € {{ total|floatformat:2 }}</strong></h6>
-                                    <h6 class="section-text text-grey">Delivery: € {{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4 section-text-title text-green"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_gift_delta > 0 %}
-                                        <p class="mb-1 text-danger section-text">
-                                            Get a free baby plant with your order spending <strong>€ {{ free_gift_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
-                                    <a href="{% url 'products' %}" class="btn btn-lg btn-hover text-white rounded-pill bg-green text-start mt-3">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left fa-lg"></i>
-                                        </span>
-                                        <span class="text-uppercase">Go back</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-lg btn-hover text-white bg-green rounded-pill text-uppercase text-end mt-3">
-                                        <span class="text-uppercase">Go to checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-cash-register fa-lg"></i>
-                                        </span>
-                                    </a>
-                                </td>
-                            </tr>
                         </table>
-                    </div>
-                    {% else %}
-                    <div class="text-center">
-                        <hr style="height:2px" class="col-6 offset-3 text-grey">
-                        <p class="lead mb-5">Helloooo???<br>Is anybody here??? <br><br> Your cart is still empty, keep shopping. <br>
-                            <i class="fab fa-pagelines fa-3x text-green mt-4"><br></i></p>
-                        <a href="{% url 'products' %}" class="btn bg-green text-white rounded-pill btn-lg">
-                            <span class="text-uppercase">Shop all</span>
-                        </a>
+                        {% endif %}
+                        <tr>
+                            <td colspan="5" class="pt-5 text-end">
+                                <h6 class="section-text text-grey"><strong>Total: € {{ total|floatformat:2 }}</strong></h6>
+                                <h6 class="section-text text-grey">Delivery: € {{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4 section-text-title text-green"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></h4>
+                                {% if free_gift_delta > 0 %}
+                                    <p class="mb-1 text-danger section-text">
+                                        Get a free baby plant with your order spending <strong>€ {{ free_gift_delta }}</strong> more!
+                                    </p>
+                                {% endif %}
+                                <a href="{% url 'products' %}" class="btn btn-lg btn-hover text-white rounded-pill bg-green mt-3">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left fa-lg"></i>
+                                    </span>
+                                    <span class="text-uppercase">Go back</span>
+                                </a>
+                                <a href="{% url 'checkout' %}" class="btn btn-lg btn-hover text-white bg-green rounded-pill text-uppercase mt-3">
+                                    <span class="text-uppercase">Go to checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-cash-register fa-lg"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
                     </div>
                 </div>
             </div>
-            {% endif %}
+
+            <!-- Table -->
+
+            <div class="row">
+                <div class="col-12">
+                    {% for item in cart_items %}
+                    <div class="text-green section-text d-block d-lg-none text-center">
+                        <div class="pt-5 mx-auto w-100">
+                            {% if item.product.image %}
+                            <img class="img-checkout rounded card-img-top"
+                                src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="img-checkout rounded card-img-top" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ item.product.name }}">
+                            {% endif %}
+                        </div>
+                        <div class="py-3">
+                            <p class="my-0">
+                                <strong>{{ item.product.name }}</strong>
+                            </p>
+                            <p class="my-0">
+                                {{ item.product.species }}
+                            </p>
+                            <p class=" body-small text-muted">SKU:
+                                {{ item.product.sku|upper }}
+                            </p>
+                        </div>
+                        <div class="w-100">
+                            <p class="my-0">
+                                <strong>Price: € {{ item.product.price }}</strong>
+                            </p>
+                        </div>
+                        <div class="w-100">
+                            <p class="my-0">
+                                <strong>Total: € {{ item.product.price | calc_subtotal:item.quantity  }}</strong>
+                            </p>
+                        </div>
+                        <div class="py-3 text-center w-50 offset-3">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <span class="input-group-text p-0 bg-green border-0">
+                                        <button class="decrement-qty btn p-0" 
+                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                            <span class="icon text-white">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </span>
+
+                                    <input class="form-control form-control-sm qty_input border-green text-center"
+                                        type="number" name="quantity" value="{{ item.quantity }}" min="1" max="50" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+
+                                    <span class="input-group-text p-0 bg-green border-0">
+                                        <button class="increment-qty btn p-0"
+                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                            <span class="icon text-white">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="mt-4">
+                                <a class="update-link text-green"><i class="fas fa-sync fa-lg"></i></a>
+                                <a class="remove-item text-red" id="remove_{{ item.item_id }}"><i class="fas fa-trash-alt fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="d-block d-lg-none">
+                    {% if free_gift_delta == 0 %}
+                    <div class="text-green section-text text-center w-100">
+                        <div class="pt-5 mx-auto">
+                            <img class="img-checkout rounded card-img-top"
+                                src="{{ MEDIA_URL }}gift-baby-plant.jpg" alt="Gift baby plant">
+                        </div>
+
+                        <div class="w-100">
+                            <p class="my-0">
+                                <strong>FREE Baby Plant</strong>
+                            </p>
+                        </div>
+                        <div class="w-100">
+                            <p class="my-0">
+                                <strong>Price: € 0.00</strong>
+                            </p>
+                        </div>
+                        <div class="w-100">
+                            <p class="my-0">
+                                <strong>Qty: 1</strong>
+                            </p>
+                        </div>
+
+                        <div class="w-100">
+                            <p class="my-0">
+                                <strong>Total: € 0.00</strong>
+                            </p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <hr style="height:2px" class="col-10 offset-1 text-grey mt-5">
+
+                        <div colspan="5" class="pt-5 text-center">
+                            <h5 class="section-text text-grey"><strong>Total: € {{ total|floatformat:2 }}</strong></h5>
+                            <h5 class="section-text text-grey">Delivery: € {{ delivery|floatformat:2 }}</h5>
+                            <h4 class="mt-4 section-text-title text-green"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></h4>
+                            {% if free_gift_delta > 0 %}
+                                <p class="mb-1 text-danger section-text">
+                                    Get a free baby plant with your order spending <strong>€ {{ free_gift_delta }}</strong> more!
+                                </p>
+                            {% endif %}
+                            <a href="{% url 'products' %}" class="btn btn-lg btn-hover text-white rounded-pill bg-green my-3">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left fa-lg"></i>
+                                </span>
+                                <span class="text-uppercase">Go back</span>
+                            </a>
+                            <a href="{% url 'checkout' %}" class="btn btn-lg btn-hover text-white bg-green rounded-pill text-uppercase my-3">
+                                <span class="text-uppercase">Go to checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-cash-register fa-lg"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="text-center">
+                    <hr style="height:2px" class="col-6 offset-3 text-grey">
+                    <p class="lead mb-5">Helloooo???<br>Is anybody here??? <br><br> Your cart is still empty, keep shopping. <br>
+                        <i class="fab fa-pagelines fa-3x text-green mt-4"><br></i></p>
+                    <a href="{% url 'products' %}" class="btn bg-green text-white rounded-pill btn-lg">
+                        <span class="text-uppercase">Shop all</span>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
+
+
 {% endblock %}}
 
 {% block postloadjs %}
