@@ -103,14 +103,14 @@
                     <i class="fab fa-cc-paypal fa-2x"></i>
                     <i class="fab fa-cc-amex fa-2x"></i>
                 </div>
-                <div class="col-lg-4 col-md-12 text-uppercase mb-4">
-                    <h5>Newsletter</h5>
-                    <hr style="height:2px">
-                    <div class="text-center">
-                        <input type="text" placeholder="Email"><br>
-                        <button type="button" class="btn btn-sm rounded-pill border-grey text-grey subscribe mt-2">Subscribe</button>
-                        
-                    </div>
+                    <div class = "col-lg-4 col-md-12 text-uppercase mb-4 subscribe_form">
+                        <h5>Newsletter</h5>
+                        <hr style="height:2px">
+                        <form action="{% url 'email_list_signup' %}" method="POST">
+                            {% csrf_token %}
+                            <input id = "email_id" type = "email" name = "email_id" placeholder="your@email.com">
+                            <button class="btn btn-sm rounded-pill border-grey text-grey subscribe mt-2" type="submit" value = "Subscribe" id = "email_submit">Subscribe</button>
+                         </form>
                     </div>
                         <div class="row">
                             <div class="col-12 text-center">
@@ -149,15 +149,68 @@
         </script>
 
 <script>
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
+    $('#subscribe').submit(function(e){
+      e.preventDefault();
+      var email_id = $("#email_id").val();
+      if(email_id){
+        var csrfmiddlewaretoken = csrftoken;
+        var email_data = {"email_id": email_id, 
+                          "csrfmiddlewaretoken" : csrfmiddlewaretoken};
+        $.ajax({
+          type : 'POST',
+          url :  '/subscribe/',
+          data : email_data,
+          success : function(response){
+            $('#email_id').val(''); 
+            if(response.status == "404"){
+              alert("This Email is already been subscribed!");
+            }
+            else{
+              alert("Thank you for Subscribing! Please Check your Email to Confirm the Subscription");
+            }
+          },
+          error: function(response) {
+            alert("Sorry Something went Wrong");
+            $('#email_id').val(''); 
+          }
+        });
+        return false;
       }
+      else{
+        alert("Please provide correct email!");
+      }
+  });
+ 
+
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
     }
+    return cookieValue;
+}
+var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+
+function csrfSafeMethod(method) {
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+})
     </script>
+
+    
 
         {% endblock %}
     </body>
