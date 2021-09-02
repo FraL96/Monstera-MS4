@@ -202,3 +202,100 @@ Here below you find the wireframes created to develop this website:
     <a href="#top">↥ Back to top!</a>
 </div>
 
+# Features
+
+## Existing Features
+
+* Navigation bar
+
+The Navigation bar is the main way for the users to enter the pages.
+Clicking on the logo, the user will be redirected home. On smaller devices, the logo will be a Monstera Deliciosa leaf.
+The search bar in the center will help the user search plants (the queries are extended to both the name and the species of the plant).
+On the right side, instead, there are the main four tabs:
+- Shop: by clicking it a dropdown will display the categories of the plant and the user will be able to choose his/her favourite.
+- Tips: a blog accessible for authenticated users. In Tips there will be articles about how to take care of the plants. There is also a comment section under the blog so that the users can interact with the website.
+- Account: no click of this tab a dropdown menu will appear and the user will be able to decide if to Login or Register. After authentification, the user will be able to also access its profile tab.
+- Cart: this tab will allow the user to access the cart and checkout. However, even without clicking it this tab have some functions. When the user will add product in its cart, the total amount under the cart will grow. Also from the same point a toast notification will show up in different moments to inform or warn the guest, In the toast there will be also a little preview of what's in the cart. 
+
+Immediately under the navbar there is a banner informing the guests that, if they will spend more then €80, they will recieve a free gift of a baby plant.
+
+<img src="readme/images/navbar.png" alt="Navbar" width="500px">
+<img src="readme/images/minimenu.png" alt="Hamburger menu" width="500px">
+<img src="readme/images/toast.png" alt="Hamburger menu" width="500px">
+
+* Footer
+
+In the footer there will be a smaller version of the logo that will also redirect to the home when clicked.
+It also contains:
+- The contacts (address, phone number and email address).
+- The payments, to inform the guests about what card are we accepting.
+- The newsletter tab
+Underneath it also includes the links to [Facebook](https://www.facebook.com/), [Instagram](https://www.instagram.com/) and [YouTube](https://www.youtube.com/).
+Lastly a separe part of the footer will display the website owner name, the year and the copyright. Besides, a little info icon can be clicked to access the FAQs page.
+
+<img src="readme/images/footer.png" alt="Footer" width="500px">
+
+* Homepage
+
+The homepage is divided in 3 areas:
+- The first one is purely to create the wow effect and attract the user.
+- The second is a little shop menu where the user can easily pick the plant category he/she wants to browse.
+- The third one is a carousel of fun fact about plants.
+
+<img src="readme/images/home.png" alt="Homepage" width="500px">
+
+* Shop
+
+This section is divided into 5 categories (Shop All, Big leaves, To hang, Succulents and Cacti). On the vew of any category there will be a picture of the plant and near it the Name, Species and price. In the website owner view, it will also be visible an edit and a delete button.
+
+<img src="readme/images/shop.png" alt="All recipes" width="500px">
+
+* Product details
+
+The recipe view displays the title with a picture and a few information about the recipe, like servings, difficulty level and ingredients.
+Underneath the preparation of the recipe is displayed step by step.
+
+<img src="readme/images/recipe-view.png" alt="Recipe View" width="500px">
+
+* Casale del Giglio
+
+In this page, there is a little explaination about the wine company. Moreover there is also a button linked to the website of the company.
+
+<img src="readme/images/wine.png" alt="Casale del Giglio" width="500px">
+
+* Profile
+
+This page is accessible only after having registered or logged in. In this section the user will be able to add new recipes by clicking on the button.
+He/she will also be able to review the added recipes, edit or delete them.
+
+<img src="readme/images/profile.png" alt="Profile" width="500px">
+
+* Add/Edit recipe
+
+In the add page, a logged in user will have the possibility to fill up the form and add a new recipe to the website.
+The edit form will be really similar but the fields will already contain the information of the recipe that the user would like to modify. Once modified, the user will have the possibility to save the changes or cancel them and go back to the previous version of the recipe.
+
+<img src="readme/images/add.png" alt="Add recipe" width="500px">
+
+* Log In / Registration
+
+In the registration page, the user will be able to create a username and a password to access the profile page. The error handlers underneath the fields will help the user to create a valid username and password.
+A flash message will show up if the user is already existent.
+In the log in page, the registered user will be able to log in by filling up his/her username and password.
+A flash message will appear if the username or password are incorrect.
+
+<img src="readme/images/login-form.png" alt="Login" width="500px">
+
+<img src="readme/images/register-form.png" alt="Register" width="500px">
+
+## Future Features
+
+In the future I would like to add to Italian Inside:
+- The possibility for users to upload their picture of the recipe once they prepared it at home.
+- The possibility for users to comment under the recipes and add their opinions or advices for other users.
+- The user will recive an email after they register with a welcoming message and their log in credentials.
+- Add videos of the preparation of the recipes
+- To give the possibility to the user to create a "favorites" list
+- Create real pages on social medias and advertise the website by teaching a few words in italian or sharing fun facts.
+- Add a map that shows from where in the world are people using Italian Inside in order to show from where people are preparing and sharing their italian recipes.
+

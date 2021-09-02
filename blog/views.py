@@ -9,13 +9,13 @@ class ArticleList(generic.ListView):
     template_name = 'blog/blog.html'
 
 
-class ArticleDetail(generic.DetailView):
-    model = Article
-    template_name = 'blog/article_detail.html'
+# class ArticleDetail(generic.DetailView):
+    # model = Article
+    # template_name = 'blog/article_detail.html'
 
 
 def article_detail(request, slug):
-    template_name = 'article_detail.html'
+    template_name = 'blog/article_detail.html'
     article = get_object_or_404(Article, slug=slug)
     comments = article.comments.filter(active=True)
     new_comment = None
