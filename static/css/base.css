@@ -3,8 +3,9 @@
 html,
 body {
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     padding-top: 60px;
+    font-family: 'Lora', serif;
 }
 
 .header-container {
@@ -33,14 +34,6 @@ body {
 
 .text-red{
     color: red;
-}
-
-header {
-    font-family: 'Lora', serif;
-}
-
-body{
-    font-family: 'Lora', serif;
 }
 
 #gift-banner{
