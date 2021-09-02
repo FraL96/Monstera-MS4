@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -19,7 +20,47 @@
         <p class="card-text ">{{ object.content | safe }}</p>
       </div>
     </div>
+
+    <div class="col-10 offset-1 card mb-4 mt-3 text-green text-start border-green-blog">
+      <div class="card-body">
+        <!-- comments -->
+        {% with comments.count as total_comments %}
+        <h2>{{ total_comments }} comments</h2>
+
+        <p>
+          {% endwith %} {% for comment in comments %}
+        </p>
+
+        <div class="comments" style="padding: 10px;">
+          <p class="font-weight-bold">
+            {{ comment.name }}
+            <span class=" text-muted font-weight-normal">
+              {{ comment.created_on }}
+            </span>
+          </p>
+          {{ comment.body | linebreaks }}
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-10 offset-1 card mb-4 mt-3 text-green text-center border-green-blog">
+      <div class="card-body">
+        {% if new_comment %}
+        <div class="alert alert-success" role="alert">
+          Your comment is awaiting moderation
+        </div>
+        {% else %}
+        <h3>Leave a comment</h3>
+        <form method="POST" style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button type="submit" class="btn btn-hover text-white rounded-pill bg-green">Submit</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 
-{% endblock content %}
+{% endblock %}
