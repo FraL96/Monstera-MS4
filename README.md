@@ -30,7 +30,6 @@ Click [here](https://monstera-ms4.herokuapp.com/) to discover Monstera.
         - [Icons](#Icons)
         - [Images](#Images)
         - [Defensive Design](#Defensive-Design)
-        - [Navigation](#Navigation)
         - [Data Modelling](#Data-Modelling)
         - [Use of Database](#Use-of-Database)
         - [Wireframes](#Wireframes)
@@ -57,7 +56,7 @@ This project is being submitted as the forth and last Milestone Project in parti
 The aim of this Milestone was to build a full-stack site based on business logic used to control a centrally-owned dataset.
 The website had to use authentification mechanisms and provide paid access to the site's data, in this case for the purchase of products.
 
-The main technologies to be used are [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), [JS](https://www.javascript.com/), [Python](https://www.python.org/), [Django](), [Postgres](), and [Stripe]() + additional libraries.
+The main technologies to be used are [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), [JS](https://www.javascript.com/), [Python](https://www.python.org/), [Django](https://www.djangoproject.com/), [Postgres](https://www.postgresql.org/), and [Stripe](https://stripe.com/en-ie) + additional libraries.
 
 ## User Stories
 
@@ -156,7 +155,7 @@ The icons used in this website are all from [Font Awesome](https://fontawesome.c
 
 ### Images
 
-The images are all been taken from [Unsplash]() in order to be without copyright.
+The images are all been taken from [Unsplash](https://unsplash.com/s/photos/plants) in order to be without copyright.
 The shortcut icon instead is been taken from [Favicon.io](https://favicon.io/) and it represents a leaf of the Monstera Deliciosa plant.
 
 ### Defensive Design
@@ -165,7 +164,7 @@ To inprove the safety of the website and protect its users, some measures have b
 
 * Newsletter
 
-* The login and register pages have been added whit the [Allauth]() library and it takes care that the requirements for the fields are respected.
+* The login and register pages have been added whit the [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) library and it takes care that the requirements for the fields are respected.
 
 * When registering, an email will be sent to the email address used for the registration and the user will have to verify its identity by clicking on the provided link before being able to login.
 
@@ -176,13 +175,6 @@ To inprove the safety of the website and protect its users, some measures have b
 * When checking out, the 'phone-number' field will accept just digits, while the 'full name' one, will accept just letters anad spaces.
 
 * Defensive error pages have been also created for the codes 400, 403, 404 and 500.
-
-### Navigation
-
-The website is been created with the user in mind. The scope is to make it as userfriendly and as instuitive as possible.
-Here below you can find the navigation scheme.
-
-![Diagram]()
 
 ### Data Modelling
 
@@ -445,14 +437,14 @@ This page contains a few answers to the most common questions about order, deliv
 * [W3C Markup Validation Service](https://validator.w3.org/) - Used to identify errors in the HTML code.
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to identify errors in the CSS code.
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to verify performance.
-* [Postrges]() -
-* [AWS]() - 
-* [Boto]() - Used for compatibility in AWS.
-* [Gunicorn]() - Used with Heroku for deployment
-* [Spycopg2]() - Link between Postgres and Django
-* [Django Crispy Forms]() - Used to add forms
-* [Stripe]() It is used so that the users can access
-* [Mailchimp]() Is used for the newsletter
+* [Postrges](https://www.postgresql.org/) - For the database
+* [AWS](https://aws.amazon.com/) - For static and media
+* [Boto](http://boto.cloudhackers.com/en/latest/) - Used for compatibility in AWS.
+* [Gunicorn](https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/gunicorn/) - Used with Heroku for deployment
+* [Spycopg2](https://www.psycopg.org/) - Link between Postgres and Django
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Used to add forms
+* [Stripe](https://stripe.com/en-ie) It is used so that the users can access
+* [Mailchimp](https://mailchimp.com/) Is used for the newsletter
 
 <div align="right">
     <a href="#top">↥ Back to top!</a>
@@ -472,7 +464,7 @@ Please consult the requirements.txt file for the necessary installs.
 
 **How to clone this project:**
 
-1. Log in to github and go to the [Monstera]() repository.
+1. Log in to github and go to the [Monstera](https://github.com/FraL96/Monstera-MS4) repository.
 2. Click on the big Code button , near the green one.
 3. Copy the URL.
 4. Open Gitbash from your computer and write 'git clone', paste the copied link and execute.
@@ -548,29 +540,29 @@ Please consult the requirements.txt file for the necessary installs.
 
 ## Content
 
-* The text for the FAQ and the blog posts are from [PLNTS.com]().
+* The text for the FAQ and the blog posts are from [PLNTS.com](https://plnts.com/).
 * The plants information are my own knowledge
-* The text from the carousel is from [Burnett's country garden]().
+* The text from the carousel is from [Burnett's country garden](https://burnettscg.com/5-fun-facts-about-house-plants/).
 * The comments of the blog are invented by me.
 
 ## Media
 
-* The images (without Copyright) are all from [unsplash.com]().
-* The logo is been created by me with [Canva]().
-* The little logo is from [thenounproject.com]().
-* The icons are from [font awesome]().
-* The tab icon is from [favicon.com]().
-* The color scheme is been chosen on [hexcolortool.com]()
+* The images (without Copyright) are all from [unsplash.com](https://unsplash.com/s/photos/plants).
+* The logo is been created by me with [Canva](https://www.canva.com/).
+* The little logo is from [thenounproject.com](https://thenounproject.com/term/monstera/3538859/).
+* The icons are from [font awesome](https://fontawesome.com/).
+* The tab icon is from [favicon.com](https://favicon.io/).
+* The color scheme is been chosen on [hexcolortool.com](https://www.hexcolortool.com/#88c46e)
 
 ## Code
 
-* For position elements I consulted [W3School]().
-* Many graphic elements are from [Bootstrap]().
-* I used [Django central]() to create the blog and its comment section.
-* I used [Mailchimp]() for the newsletter.
-* I used [StackOverflow]() to create the price that changes in real time with the cange of quantity.
-* I used the videos from [Code Institute]() - Boutique Ado to see how to start designing the website.
-* I used [Stripe Docs]() to add the credit card bar in checkout.
+* For position elements I consulted [W3School](https://www.w3schools.com/).
+* Many graphic elements are from [Bootstrap](https://getbootstrap.com/).
+* I used [Django central](https://djangocentral.com/creating-comments-system-with-django/) to create the blog and its comment section.
+* I used [Mailchimp](https://mailchimp.com/) for the newsletter.
+* I used [StackOverflow](https://stackoverflow.com/) to create the price that changes in real time with the cange of quantity.
+* I used the videos from [Code Institute](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopment) - Boutique Ado to see how to start designing the website.
+* I used [Stripe Docs](https://stripe.com/docs) to add the credit card bar in checkout.
 
 <div align="right">
     <a href="#top">↥ Back to top!</a>
@@ -580,11 +572,11 @@ Please consult the requirements.txt file for the necessary installs.
 
 I want to truly thank this amazing group of people that inspired and sustained me into completing this project.
 
-* My mentor [Precious Ijege]() that gave me great advices and helped me solve all the questions and doubts I had.
-* The extraorinary tutors [Jo](), [Shirley](), [Igor]() and [Micheal]() that gided me into identifying and solving bugs in my code.
-* My better half, [Cathal Moore](), always there to give me strenght and never complaining when I ramble about coding stuff 24/7.
-* My parents, [Gabriele e Monica Lupu]() and grandparents, my biggest sustainers from day one.
-* [Declan]() and [Ann Moore](), my second family and the people that first introduced me to IT. Without them I would not be the same person I am today.
+* My mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) that gave me great advices and helped me solve all the questions and doubts I had.
+* The extraorinary tutors Jo, Shirley, Igor and Micheal that gided me into identifying and solving bugs in my code.
+* My better half, [Cathal Moore](https://www.facebook.com/cathal.moore.39), always there to give me strenght and never complaining when I ramble about coding stuff 24/7.
+* My parents, [Gabriele e Monica Lupu](https://www.facebook.com/lupu.emonica) and grandparents, my biggest sustainers from day one.
+* [Declan](https://www.linkedin.com/in/declan-moore-83728b80/) and Ann Moore, my second family and the people that first introduced me to IT. Without them I would not be the same person I am today.
 
 # Disclaimer
 
