@@ -14,25 +14,25 @@ This file is the forth chapter of the full README file. Click here to go to [REA
 
 # Code Validators
 
-### [W3C HTML Validator]():
+### [W3C HTML Validator](https://validator.w3.org/):
 
 In all the files, the validator interprets the django syntax as error. Apart that, no errors are found in the actual "plain code".
 
-![CSS validator](./media-readme/wireframes/validator-html.png)
+![CSS validator](./media-readme/validator-html.png)
 
 
 ### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/):
 
 In the CSS file, only one error was found. However in this situation I used "clip" to solge a bug where the scrollbar use to go under the navbar. For this reason I decide to keep it.
 
-![CSS validator](./media-readme/wireframes/validator-css.png)
+![CSS validator](./media-readme/validator-css.png)
 
 ## [PEP8](http://pep8online.com/)
 
 The PEP8 validator revealed some errors. However they where all about whitespaces (missing or too many).
 I considered that wasn't a critical error so I decided to keep it for now. 
 
-![PEP8](./media-readme/wireframes/pep8.png)
+![PEP8](./media-readme/pep8.png)
 
 ### [JS Hint](https://jshint.com/)
 
@@ -50,8 +50,8 @@ The website display perfectly on the 5 browsers I tried it on.
 Also all the pages display great on the devices we tried it on.
 (For the browsers have been used real ones, while for the devices the results are taken from a devices emulator.)
 
-![Responsive](./media-readme/wireframes/responsive.png)
-![Conpatibility](./media-readme/wireframes/compatibility.png)
+![Responsive](./media-readme/responsive.png)
+![Conpatibility](./media-readme/compatibility.png)
 
 # Testing User Stories
 
