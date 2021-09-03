@@ -294,6 +294,10 @@ This page contains a few answers to the most common questions about order, deliv
 
 * Adding login with social media.
 
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
+
 
 # Technologies Used
 
@@ -325,10 +329,17 @@ This page contains a few answers to the most common questions about order, deliv
 * [Stripe]() It is used so that the users can access
 * [Mailchimp]() Is used for the newsletter
 
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
 
 # Testing
 
 This chapter is displayed in a different file. Click [here](./TESTING.md) to go to Testing.
+
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
 
 # Deployment
 
@@ -403,6 +414,56 @@ Please consult the requirements.txt file for the necessary installs.
 9. Add the heroku app URL to the ALLOWED HOSTS
 
 10. Add - Commit -Push
+
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
+
+# Credits
+
+## Content
+
+* The text for the FAQ and the blog posts are from [PLNTS.com]().
+* The plants information are my own knowledge
+* The text from the carousel is from [Burnett's country garden]().
+* The comments of the blog are invented by me.
+
+## Media
+
+* The images (without Copyright) are all from [unsplash.com]().
+* The logo is been created by me with [Canva]().
+* The little logo is from [thenounproject.com]().
+* The icons are from [font awesome]().
+* The tab icon is from [favicon.com]().
+* The color scheme is been chosen on [hexcolortool.com]()
+
+## Code
+
+* For position elements I consulted [W3School]().
+* Many graphic elements are from [Bootstrap]().
+* I used [Django central]() to create the blog and its comment section.
+* I used [Mailchimp]() for the newsletter.
+* I used [StackOverflow]() to create the price that changes in real time with the cange of quantity.
+* I used the videos from [Code Institute]() - Boutique Ado to see how to start designing the website.
+* I used [Stripe Docs]() to add the credit card bar in checkout.
+
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
+
+# Acknowlegment
+
+I want to truly thank this amazing group of people that inspired and sustained me into completing this project.
+
+* My mentor [Precious Ijege]() that gave me great advices and helped me solve all the questions and doubts I had.
+* The extraorinary tutors [Jo](), [Shirley](), [Igor]() and [Micheal]() that gided me into identifying and solving bugs in my code.
+* My better half, [Cathal Moore](), always there to give me strenght and never complaining when I ramble about coding stuff 24/7.
+* My parents, [Gabriele e Monica Lupu]() and grandparents, my biggest sustainers from day one.
+* [Declan]() and [Ann Moore](), my second family and the people that first introduced me to IT. Without them I would not be the same person I am today.
+
+# Disclaimer
+
+This website is for educational purposes only. For any concerns about images or content, please contact me at : francesca_lupu@live.it
 
 
 
