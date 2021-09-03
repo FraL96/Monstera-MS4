@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+% block extra_title %} | Profile {% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
@@ -22,6 +24,7 @@
             </div>
         </div>
     </div>
+    <!--Delivery Info-->
     <div class="row mx-auto">
         <div class="col-12 col-lg-4 offset-lg-1">
             <p class="text-grey text-uppercase text-center">Your Delivery Information</p>
@@ -31,6 +34,7 @@
                 <button class="btn bg-green text-white rounded-pill text-uppercase float-right mb-3">Update Information</button>
             </form>
         </div>
+        <!--Past Orders-->
         <div class="col-12 col-lg-7">
             <p class="text-grey text-uppercase text-center">Order History</p>
             <hr style="height:2px" class="col-6 offset-3 text-green">
