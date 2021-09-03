@@ -326,5 +326,84 @@ This page contains a few answers to the most common questions about order, deliv
 * [Mailchimp]() Is used for the newsletter
 
 
+# Testing
+
+This chapter is displayed in a different file. Click [here](./TESTING.md) to go to Testing.
+
+# Deployment
+
+Please consult the requirements.txt file for the necessary installs.
+
+**How to clone this project:**
+
+1. Log in to github and go to the [Monstera]() repository.
+2. Click on the big Code button , near the green one.
+3. Copy the URL.
+4. Open Gitbash from your computer and write 'git clone', paste the copied link and execute.
+5. Type "git clone", paste the URL and press "enter".
+
+**How to run this code locally:**
+
+1. In the terminal: Install all your requirements with pip3 install -r requirements.txt.
+2. Create a gitignore file to ignore all passwords.
+3. Create an env.py file and add to it the following code (make sure env.py is part of gitignore):
+
+     ```
+    Import os
+    os.environ("SECRET_KEY", "Added by developer")
+    os.environ("STRIPE_PUBLIC_KEY", "Added by developer")
+    os.environ("STRIPE_SECRET_KEY", "Added by developer")
+    os.environ("STRIPE_WH_SECRET", "Added by developer")
+    os.environ("MAILCHIMP_API_KEY", "Added by developer")
+    os.environ("MAILCHIMP_DATA_CENTER", "Added by developer")
+    os.environ("MAILCHIMP_EMAIL_LIST_ID", "Added by developer")
+
+4. Execute 'make migrations' and 'migrate'
+5. Add the file db.json with all the products.
+6. Create a superuser to access the admin in the backend.
+7. type 'python3 manage.py runserver to open the website preview.
+8. Check if the data is been added correctly (you can access it by just typing ' /admin' after the urls link.).
+
+**How to deploy to Heroku:**
+
+1. Execute 'pip3 freeze -- local > requirements.txt.' to be sure all the files we need are in there.
+2. Go tu heroku and select 'new' by clicking on the button on the right and then 'Create new app'. Fill up all the fields that heroku asks you to, automate the GitHub's deploy (Select Connect To Github - search your repository - select it - Enable automatic deploys) and stop when you are back in the overview of the project.
+3. Back in your IDE, create a Procfile file with inside 'web: gunicorn <name app>.wsgi:application' and then add - commit - push.
+4. In heroku, go to 'Resources' and add the free veraion of Postges.
+5. Then, go in settings and, after clicking reveal vars, add all these.
+
+    | KEY            | VALUE         |
+    |----------------|---------------|
+    | AWS_ACCESS_KEY_ID | `<aws access key>`  |
+    | AWS_SECRET_ACCESS_KEY | `<aws secret access key>`  |
+    | DATABASE_URL| `<postgres database url>`  |
+    | EMAIL_HOST_PASS | `<email password>` |
+    | EMAIL_HOST_USER| `<email address>`  |
+    | MAILCHIMP_API_KEY| `<api key>`  |
+    | MAILCHIMP_DATA_CENTER| `<datacenter id>`  |
+    | MAILCHIMP_EMAIL_LIST_ID| `<emailist id>`  |
+    | SECRET_KEY | `<your secret key>`  |
+    | STRIPE_PUBLIC_KEY| `<your stripe public key>`  |
+    | STRIPE_SECRET_KEY| `<your stripe secret key>`  |
+    | STRIPE_WH_SECRET| `<your stripe wh key>`  |
+    | USE_AWS | `True`  |
+
+
+6. Copy and paste the Postgres URL as 'DATABASE_URL' in the settings.py of Monstera. This is just a temporary precedure and this piece of code will be changed in a few steps more.
+
+    ```
+    DATABASES = {
+        'default': dj_database_url.parse("<DATABASE_URL here>")
+         }
+    ```
+7. Remember to migrate here and to create a superuser if you didn't yet.
+
+8. At this point you can reset the database to the old line.
+
+9. Add the heroku app URL to the ALLOWED HOSTS
+
+10. Add - Commit -Push
+
+
 
 
