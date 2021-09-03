@@ -229,7 +229,7 @@ In the footer there will be a smaller version of the logo that will also redirec
 It also contains:
 - The contacts (address, phone number and email address).
 - The payments, to inform the guests about what card are we accepting.
-- The newsletter tab
+- The newsletter tab (the guest that will insert their email address, will automatically receive a welcome email).
 Underneath it also includes the links to [Facebook](https://www.facebook.com/), [Instagram](https://www.instagram.com/) and [YouTube](https://www.youtube.com/).
 Lastly a separe part of the footer will display the website owner name, the year and the copyright. Besides, a little info icon can be clicked to access the FAQs page.
 
@@ -260,7 +260,11 @@ Tips is a blog everyone can view. There is first an overview of the articles and
 
 * Account
 
-In this tab a not authenticated user will have the possibility to login or register. The authenticated user instead, will be able to access his/her profile page. The profile page is divided in 2 zones. In one the user can save his/her delivery information to avoid writing it for every order. In the second part the user can view and access the 'confirmation' page of past orders and review all the information.
+In this tab a not authenticated user will have the possibility to login (a tab for users that forgot their password is included in this tab) or register. The authenticated user instead, will be able to access his/her profile page. The profile page is divided in 2 zones. In one the user can save his/her delivery information to avoid writing it for every order. In the second part the user can view and access the 'confirmation' page of past orders and review all the information.
+
+* Add products
+
+This page will only be visible to an authenticated superuser. In this view, the superuser can add new products to the shop.
 
 * Cart
 
@@ -268,4 +272,59 @@ In the cart the user will find all the plants he previously added, the quantitie
 
 * Checkout
 
-Once the user 
+Once the user have decided what to buy, in the checkout page they will be able to fill in their details (or retrieve them from they profile if they previously set them) and inser their credit card details. Also in this page it will be provided a little overview of the purchase. These information will also be sent by mail to the user.
+
+* Confirmation
+
+If the users inserted all the necessary information and proceeded with the purchase, they will then be recirected to the confirmation page where they will find information regarding their order (like the order number, the products the delivery info and the total price). On the top it will be also attched the little info logo to review the FAQs.
+
+* FAQ
+
+This page contains a few answers to the most common questions about order, delivery and refunds.
+
+## Future feature
+
+* Newsletter: In the future I would like to create a way so that the users will receive every month a freebie in their email. It can be another gift to receive with the next order, a digital content or a dicount. This means that a field for promotional codes will have to be added to the checkout tab.
+
+* Tips (blog): I would like in future to improve the blog by adding images and restyling the content of the article. Also I would like to make it only accessible for authenticated users. Moreover I would like to add a tempate to add, edit and delete articles and moderate comments directly from the frontend.
+
+* I would also like to add paginstion to my shop
+
+* I would like to allow reviews in the product details page.
+
+* Adding login with social media.
+
+
+# Technologies Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) - Used to create the structure of the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Used to style the website.
+* [Django]() - Used as the main framework
+* [JQuery](https://jquery.com/) - Used to add interactive features to the website.
+* [Python3](https://www.python.org/) - Used to create the backend of the website.
+* [Heroku](https://dashboard.heroku.com/apps) - Used to deploy my website.
+* [Balsamiq](https://balsamiq.com/) - Used to design the Wireframes.
+* [Bootsrap]() - Used to add functionality and beautify the website.
+* [Gitpod](https://www.gitpod.io/) - Used to design and host the project.
+* [GitHub](https://github.com/) - Used to hold the repository.
+* [Google fonts](https://fonts.google.com/) - Used to add fonts to the website.
+* [AmIResponsive](http://ami.responsivedesign.is/#) - Used for the READ ME cover picture.
+* [Fontawesome](https://fontawesome.com/v4.7.0/) - used for the icons.
+* [PEP8](https://www.python.org/dev/peps/pep-0008/) - Used to maintain a proper style in the Python code.
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to test responsiveness and identify bugs.
+* [Autoprefixer](https://autoprefixer.github.io/) - Used to parse my CSS code.
+* [W3C Markup Validation Service](https://validator.w3.org/) - Used to identify errors in the HTML code.
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to identify errors in the CSS code.
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to verify performance.
+* [Postrges]() -
+* [AWS]() - 
+* [Boto]() - Used for compatibility in AWS.
+* [Gunicorn]() - Used with Heroku for deployment
+* [Spycopg2]() - Link between Postgres and Django
+* [Django Crispy Forms]() - Used to add forms
+* [Stripe]() It is used so that the users can access
+* [Mailchimp]() Is used for the newsletter
+
+
+
+
