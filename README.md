@@ -239,7 +239,8 @@ Country | profile_country | CountryField | blank_label='Country', null=True, bla
  County | county | ChartField | max-length=80, null=True, blank=True
  Country| country | CountryField | blank_label='Country *', null=False, blank=False
  
- 
+ | **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
  Date | date | DateTimeField | auto_now_add=True
  Delivery cost | delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0
  Order total | order_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0
@@ -298,8 +299,9 @@ In the developement phase the database used was sqlite3 (Django's default). On d
 Here below you find the wireframes created to develop this website:
 
 
-* [Desktop](./media-readme/wireframes/monstera-desktop.pdf)
+
 * [Mobile](./media-readme/wireframes/monstera-mobile.pdf)
+* [Desktop](./media-readme/wireframes/monstera-desktop.pdf)
 
 <div align="right">
     <a href="#top">↥ Back to top!</a>

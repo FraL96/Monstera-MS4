@@ -18,20 +18,21 @@ This file is the forth chapter of the full README file. Click here to go to [REA
 
 In all the files, the validator interprets the django syntax as error. Apart that, no errors are found in the actual "plain code".
 
-<img src="readme/images/w3c-valid.png" alt="Validator HTML" width="500px">
+![CSS validator](./media-readme/wireframes/validator-html.png)
+
 
 ### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/):
 
 In the CSS file, only one error was found. However in this situation I used "clip" to solge a bug where the scrollbar use to go under the navbar. For this reason I decide to keep it.
 
-<img src="readme/images/css-validation.png" alt="CSS validation" width="500px">
+![CSS validator](./media-readme/wireframes/validator-css.png)
 
 ## [PEP8](http://pep8online.com/)
 
 The PEP8 validator revealed some errors. However they where all about whitespaces (missing or too many).
 I considered that wasn't a critical error so I decided to keep it for now. 
 
-<img src="readme/images/pep8.png" alt="PEP8" width="500px">
+![PEP8](./media-readme/wireframes/pep8.png)
 
 ### [JS Hint](https://jshint.com/)
 
@@ -49,7 +50,8 @@ The website display perfectly on the 5 browsers I tried it on.
 Also all the pages display great on the devices we tried it on.
 (For the browsers have been used real ones, while for the devices the results are taken from a devices emulator.)
 
-<img>
+![Responsive](./media-readme/wireframes/responsive.png)
+![Conpatibility](./media-readme/wireframes/compatibility.png)
 
 # Testing User Stories
 
@@ -167,6 +169,8 @@ Also, error hander pages have been put in place to protect the privacy of our (a
 2. Another bug I had when I started the project was the allauth templates not working. I was trying to edit the template of the login page but my changes didn't seem to have effect. I had to contact a tutor and she was as confused as me. We chatted for 2 days before realizing that the page was just placed in the wrong folder. Once we solved that and place the file in the right folder, it all worked.
 
 3. A bug that I didn't manage to solve is the fact that each category in the shop has its name on top but the "Shop all" one displays the name of all categories. I tried to implement a loop to give it a different title but unfortunately it didn't work.
+
+4. The last bug is the phone number phone that has validation in checkout but not in profile. Unfortunately I couln't find the cause.
 
 <div align="right">
     <a href="#top">↥ Back to top!</a>
