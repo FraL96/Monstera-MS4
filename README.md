@@ -1,7 +1,7 @@
 <h1 align="center">MONSTERA</h1>
 <h2 align="center">the future is green</h2>
 
-![intro](./add picture devices)
+![Monstera](./media-readme/home-readme.png)
 
 Monstera is a project born from a passion. In the last year I discovered my big love for plants of every kind.
 At the moment I share my house with over 50 plants, some bought and some grown from seeds (took from a shop or directly from the vegetables and fruit in my fridge). And almost every month the family grows a bit bigger.
@@ -140,7 +140,7 @@ The main technologies to be used are [HTML](https://en.wikipedia.org/wiki/HTML),
 
 The website color scheme is consistent in the entire website and uses 3 colors, the green #5B9A3F, the grey #CAC8CF and the white #FFFFFF. The green is been chosen to match the main product of the website, plants. The grey is been used mainly for the text and to create a contrast with the green but maintaining an elegant style. And the white is been used to highlight other colors and give an elegant and modern look to the whole website.
 
-![color palette](./image)
+![Colors](./media-readme/color-scheme.png)
 
 ### Fonts
 
@@ -148,7 +148,7 @@ The font that I used for the whole website is Lora with a fallback of serif. The
 
 I chose this this font because in my opinion it suits the website and the style really well. To distinguish between the different types of text (title, paragraph, button...) I used different styles of the same font, like normal, **bold** or *italic*.
 
-![font](./image)
+![font](./media-readme/lora.png)
 
 ### Icons
 
@@ -182,7 +182,7 @@ To inprove the safety of the website and protect its users, some measures have b
 The website is been created with the user in mind. The scope is to make it as userfriendly and as instuitive as possible.
 Here below you can find the navigation scheme.
 
-![font](./image)
+![Diagram]()
 
 ### Data Modelling
 
@@ -298,8 +298,8 @@ In the developement phase the database used was sqlite3 (Django's default). On d
 Here below you find the wireframes created to develop this website:
 
 
-* [Desktop](./readme/wireframes/desktop-wireframe.pdf)
-* [Mobile](./readme/wireframes/mobile-wireframe.pdf)
+* [Desktop](./media-readme/wireframes/monstera-desktop.pdf)
+* [Mobile](./media-readme/wireframes/monstera-mobile.pdf)
 
 <div align="right">
     <a href="#top">↥ Back to top!</a>
@@ -322,9 +322,7 @@ On the right side, instead, there are the main four tabs:
 
 Immediately under the navbar there is a banner informing the guests that, if they will spend more then €80, they will recieve a free gift of a baby plant.
 
-<img src="readme/images/navbar.png" alt="Navbar" width="500px">
-<img src="readme/images/minimenu.png" alt="Hamburger menu" width="500px">
-<img src="readme/images/toast.png" alt="Hamburger menu" width="500px">
+![Navbar](./media-readme/navbar.png)
 
 * Footer
 
@@ -336,7 +334,7 @@ It also contains:
 Underneath it also includes the links to [Facebook](https://www.facebook.com/), [Instagram](https://www.instagram.com/) and [YouTube](https://www.youtube.com/).
 Lastly a separe part of the footer will display the website owner name, the year and the copyright. Besides, a little info icon can be clicked to access the FAQs page.
 
-<img src="readme/images/footer.png" alt="Footer" width="500px">
+![Footer](./media-readme/footer.png)
 
 * Homepage
 
@@ -345,45 +343,67 @@ The homepage is divided in 3 areas:
 - The second is a little shop menu where the user can easily pick the plant category he/she wants to browse.
 - The third one is a carousel of fun fact about plants.
 
-<img src="readme/images/home.png" alt="Homepage" width="500px">
+![Homepage](./media-readme/home.png)
 
 * Shop
 
 This section is divided into 5 categories (Shop All, Big leaves, To hang, Succulents and Cacti). On the page of any category there will be a picture of the plant and near it the Name, species and price. In the website owner view, it will also be visible an edit and a delete button.
 
-<img src="readme/images/shop.png" alt="All recipes" width="500px">
+![Shop](./media-readme/shop.png)
+
 
 * Product details
 
 After clicking on a plant, the user will access the product view where will find the same information from the shop view plu more details about the plant and how to take care of it. Moreover there will be also the possiblity to select how many plants of the same kind the user want to purchase (the price will grow in real time with the change of quantity to help the user)and a button to move the plants to the cart.
 
+![Product details](./media-readme/product-details.png)
+
+
 * Tips
 
 Tips is a blog everyone can view. There is first an overview of the articles and, when clicking on one of them the user will access a second page. The second page will have the entire text of the article selected plus a section below where to view past comments and add new ones. The comments that will be submitted will have to be approved by the website moderator before appearing underneath the article.
+
+![Tips](./media-readme/tips.png)
 
 * Account
 
 In this tab a not authenticated user will have the possibility to login (a tab for users that forgot their password is included in this tab) or register. The authenticated user instead, will be able to access his/her profile page. The profile page is divided in 2 zones. In one the user can save his/her delivery information to avoid writing it for every order. In the second part the user can view and access the 'confirmation' page of past orders and review all the information.
 
+![Account](./media-readme/profile.png)
+
+
 * Add products
 
 This page will only be visible to an authenticated superuser. In this view, the superuser can add new products to the shop.
+
+![Add](./media-readme/add.png)
+
 
 * Cart
 
 In the cart the user will find all the plants he previously added, the quantities and the total price. Users that spend over €100 euros will not have to pay for delivery, while the ones that will not reach this sum will pay a 10% of their cart. Moreover at Monstera at the moment there is a promotion: for every €80 spent, we will send to the user also a free baby plant. The user will be informed of this by the banner under the navbar or by the fact that if the cart contains already €80 euros of products, a new line will be added with the gift.
 
+![Cart]](./media-readme/cart.png)
+
+
 * Checkout
 
 Once the user have decided what to buy, in the checkout page they will be able to fill in their details (or retrieve them from they profile if they previously set them) and inser their credit card details. Also in this page it will be provided a little overview of the purchase. These information will also be sent by mail to the user.
+
+![Checkout](./media-readme/checkout.png)
 
 * Confirmation
 
 If the users inserted all the necessary information and proceeded with the purchase, they will then be recirected to the confirmation page where they will find information regarding their order (like the order number, the products the delivery info and the total price). On the top it will be also attched the little info logo to review the FAQs.
 
+![Order success](./media-readme/checkout-success.png)
+
 * FAQ
 
 This page contains a few answers to the most common questions about order, delivery and refunds.
+
+![Faq](./media-readme/faq.png)
+
 
 ## Future feature
 
