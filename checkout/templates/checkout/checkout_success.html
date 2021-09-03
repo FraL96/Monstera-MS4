@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %} | Order succeeded {% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
@@ -22,21 +24,21 @@
                 <hr class="text-grey">
             </div>
         </div>
-
+        <!-- Summary -->
         <div class="row">
             <div class="col-12 col-lg-6 offset-lg-3 text-center">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
-                            <h5 class="text-white text-uppercase text-center my-3"><strong>Order Info</strong> <a href="{% url 'faq' %}"><i class="fas fa-info-circle text-grey"></i></a></h5>
+                            <h5 class="text-white text-uppercase text-center my-3"><strong>Order Info</strong> <a href="{% url 'faq' %}"><i class="fas fa-info-circle fa-lg text-grey"></i></a></h5>
                         </div>
                     </div>
-
+                    <!-- Order info -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-grey font-weight-bold"><strong>Order Number</strong></p>
                         </div>
-                        <div class="col-12 col-md-8  ">
+                        <div class="col-12 col-md-8 ">
                             <p class="mb-0 text-grey">{{ order.order_number }}</p>
                         </div>
                     </div>
@@ -49,7 +51,7 @@
                             <p class="mb-0 text-grey">{{ order.date }}</p>
                         </div>
                     </div>
-
+                    <!-- Order Details -->
                     <div class="row">
                         <div class="col">
                             <h5 class="text-white text-uppercase text-center my-3"><strong>Order Details</strong></h5>
@@ -93,7 +95,7 @@
                         </div>
                     </div>
                 {% endif %}
-
+                    <!-- Delivery address -->
                     <div class="row">
                         <div class="col">
                             <h5 class="text-white text-uppercase text-center my-3"><strong>Delivering To</strong></h5>
