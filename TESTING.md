@@ -37,6 +37,10 @@ I considered that wasn't a critical error so I decided to keep it for now.
 
 JS Hint revealed no errors in the js files.
 
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
+
 ------
 
 #  Responsiveness / Browser compatibility
@@ -141,12 +145,20 @@ The navar is hosting the main tabs (with dropdowns). Moreover in the second sect
 
 8. In the cart view users will be able to review whatthey are about to buy. Also, in the same page they will be asked to fill up their shipping details (for the logged in user it will be already pre-compiled) and credit card details. (If they change idea on what they want, moreover, they will be able to change the quantity or delete some products).
 
-Once all these fields are filled, the user will able to click "pay". If the payment will be successfull they will be redirected to a page with the information of their purchase (which article, the order number and the place it will be delivered at)
+Once all these fields are filled, the user will able to click "pay". If the payment will be successfull they will be redirected to a page with the information of their purchase (which article, the order number and the place it will be delivered at).
+
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
 
 # Testing defensive design
 
 Defensive design is been put in place. Many form fields are required or require a specific type of input (letters or numbbers). The user will have to respect these rules in order to finalize his/her purchase.
 Also, error hander pages have been put in place to protect the privacy of our (authenticated) users.
+
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
 
 # Bugs
 
@@ -155,3 +167,7 @@ Also, error hander pages have been put in place to protect the privacy of our (a
 2. Another bug I had when I started the project was the allauth templates not working. I was trying to edit the template of the login page but my changes didn't seem to have effect. I had to contact a tutor and she was as confused as me. We chatted for 2 days before realizing that the page was just placed in the wrong folder. Once we solved that and place the file in the right folder, it all worked.
 
 3. A bug that I didn't manage to solve is the fact that each category in the shop has its name on top but the "Shop all" one displays the name of all categories. I tried to implement a loop to give it a different title but unfortunately it didn't work.
+
+<div align="right">
+    <a href="#top">↥ Back to top!</a>
+</div>
