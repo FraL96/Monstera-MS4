@@ -349,14 +349,14 @@ The homepage is divided in 3 areas:
 
 This section is divided into 5 categories (Shop All, Big leaves, To hang, Succulents and Cacti). On the page of any category there will be a picture of the plant and near it the Name, species and price. In the website owner view, it will also be visible an edit and a delete button.
 
-![Shop](./media-readme/shop.png)
+![Shop](./media-readme/products.png)
 
 
 * Product details
 
 After clicking on a plant, the user will access the product view where will find the same information from the shop view plu more details about the plant and how to take care of it. Moreover there will be also the possiblity to select how many plants of the same kind the user want to purchase (the price will grow in real time with the change of quantity to help the user)and a button to move the plants to the cart.
 
-![Product details](./media-readme/product-details.png)
+![Product details](./media-readme/product_detail.png)
 
 
 * Tips
@@ -383,7 +383,7 @@ This page will only be visible to an authenticated superuser. In this view, the 
 
 In the cart the user will find all the plants he previously added, the quantities and the total price. Users that spend over €100 euros will not have to pay for delivery, while the ones that will not reach this sum will pay a 10% of their cart. Moreover at Monstera at the moment there is a promotion: for every €80 spent, we will send to the user also a free baby plant. The user will be informed of this by the banner under the navbar or by the fact that if the cart contains already €80 euros of products, a new line will be added with the gift.
 
-![Cart]](./media-readme/cart.png)
+![Cart](./media-readme/cart.png)
 
 
 * Checkout
